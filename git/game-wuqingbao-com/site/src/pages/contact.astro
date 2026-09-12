@@ -1,0 +1,87 @@
+---
+import Base from '../layouts/Base.astro';
+import { t } from '../i18n/index.js';
+import { langHref } from '../lib/nav.js';
+
+const lang = 'en';
+const href = (p) => langHref(lang, p);
+---
+<Base lang={lang} title="Contact" description="How to get in touch with H5 Arcade — report a broken game, recommend a new open-source game to add, report copyright concerns, or reach the maintainers." currentPath="/contact">
+  <div class="wrap info-page">
+    <h1>Contact H5 Arcade</h1>
+    <p class="lead">We read every message. Pick the channel that fits what you want to say and you'll hear back within a week or two.</p>
+
+    <section>
+      <h2>📮 Write to us directly</h2>
+      <p>The fastest way to reach the maintainers is email. Anything related to the site itself, a specific game page, takedown requests, or press inquiries can go there. We promise to respond, not ignore your inbox.</p>
+      <div class="card">
+        <h3>Email address</h3>
+        <p><a href="mailto:hello@game.wuqingbao.com"><strong>hello@game.wuqingbao.com</strong></a></p>
+        <p style="font-size: 14px; color: var(--muted); margin-top: 6px;">We read every email from real people. For automated form submissions you can also paste the same content into an email — we treat them identically.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🐛 Report a broken or missing game</h2>
+      <p>This is the most common type of email we get, and it's also the most helpful. We have 35+ self-hosted games and every so often an upstream update, a build script edge-case, or a browser API deprecation breaks something that used to work. If you hit any of the following, please send us two lines — the URL and a one-sentence description of what went wrong — and we'll fix it:</p>
+      <ul>
+        <li>The game iframe is blank or returns a 404.</li>
+        <li>The canvas loads but the game never starts (stuck on "Loading" or a black screen).</li>
+        <li>Controls listed on the page don't match what the game actually accepts.</li>
+        <li>The "Open in new tab" link lands somewhere that isn't the game.</li>
+        <li>The upstream repository was deleted or moved and the "View source" link is broken.</li>
+      </ul>
+      <p>A screenshot never hurts, but isn't required. Screenshots of the browser console (F12) are particularly useful for WebGL or JavaScript runtime errors.</p>
+    </section>
+
+    <section>
+      <h2>✨ Recommend a game to add</h2>
+      <p>We love recommendations. Before you send one in, a quick reminder of what we can accept — so your submission doesn't land in a pile of "we can't host this" replies:</p>
+      <div class="card">
+        <h3>What we are looking for</h3>
+        <ul style="margin-bottom: 0;">
+          <li>Public GitHub repository, with a real README and a clear license (MIT/Apache/GPL/BSD/CC0 all fine).</li>
+          <li>Plays end-to-end inside a normal browser tab (HTML/CSS/JS or WebGL). No native downloads, no Unity / Flash / Java plugins.</li>
+          <li>Doesn't require a server component to play, or ships with an offline / local mode that does.</li>
+          <li>We'd rather see <em>one</em> really good recommendation with a link to the repo and one line about why you love it, than twenty uncurated lists.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>© Copyright &amp; takedown requests</h2>
+      <p>Every game on this site is the open-source work of its original authors and hosted here according to the license attached to each repository. That said, if you are a project author, a rights-holder, or their authorized agent, and you believe that a specific page or vendor copy on this site violates your license or your rights, please email us at <a href="mailto:hello@game.wuqingbao.com">hello@game.wuqingbao.com</a> with the following information and we will respond within one business day:</p>
+      <ul>
+        <li>Your name, contact information, and your relationship to the work (author, lawyer, DMCA agent etc.).</li>
+        <li>The exact URL on game.wuqingbao.com you are referring to.</li>
+        <li>The upstream repository or page the work was originally published under, and a clear statement of which part of the license we appear to be violating.</li>
+        <li>Whether you would prefer (a) a full takedown of the vendor copy plus a redirect to your upstream, or (b) a correction to the attribution, metadata, or screenshot.</li>
+      </ul>
+      <p>We do not want to host or link to any work whose rights-holder doesn't want it here. There are thousands of great open-source games to host — we don't need the one you made and don't want listed.</p>
+    </section>
+
+    <section>
+      <h2>💬 Open public channels (GitHub)</h2>
+      <p>For anyone who prefers public discussion, the entire site is developed in public on GitHub and we use GitHub Issues for most planning discussions:</p>
+      <dl>
+        <dt>Repository</dt>
+        <dd><a href="https://github.com/wuxiumu/game-wuqingbao-com" rel="noopener">github.com/wuxiumu/game-wuqingbao-com</a></dd>
+        <dt>Game recommendations &amp; broken reports</dt>
+        <dd>Open an issue and tag it appropriately — maintainers will triage the same day.</dd>
+        <dt>Want to contribute code?</dt>
+        <dd>Pick any issue marked "Good first issue" and drop a comment — we'll help you get set up locally in under ten minutes.</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>⏱️ Response times</h2>
+      <p>This is a hobby project, not a 24/7 SLA shop. So in practice:</p>
+      <ul>
+        <li>Takedowns / DMCA-style requests: <strong>1 business day</strong>.</li>
+        <li>Broken games with clear reproduction steps: <strong>3–5 days</strong>.</li>
+        <li>Game recommendations: we keep a backlog and reply when we've tried the game, usually within <strong>1–2 weeks</strong>.</li>
+        <li>Anything longer: if you don't hear back in two weeks, re-send your email once — occasional anti-spam filters do eat mail.</li>
+      </ul>
+    </section>
+  </div>
+</Base>

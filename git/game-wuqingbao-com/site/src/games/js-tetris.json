@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "slug": "js-tetris",
+  "title": {
+    "en": "JavaScript Tetris",
+    "zh": "俄罗斯方块"
+  },
+  "summary": {
+    "en": "Jake Gordon's clean Tetris implementation in pure JS, no framework.",
+    "zh": "纯 JavaScript 俄罗斯方块，经典实现 + 详尽配套教程文章。"
+  },
+  "description": {
+    "en": "Shift left and right, rotate with up, soft-drop with down, and slam pieces home with space. Complete a full row to clear it and score — let the stack reach the top and it's over.",
+    "zh": "左右移动、上键旋转、下键加速、空格直落。填满一整行自动消除得分，方块堆到顶即结束。"
+  },
+  "howto": {
+    "en": "Arrow keys move/rotate, space drops.",
+    "zh": "方向键移动旋转，空格硬降。"
+  },
+  "categories": [
+    "arcade",
+    "puzzle",
+    "retro"
+  ],
+  "tags": [
+    "tetris-like",
+    "keyboard",
+    "pixel-art",
+    "retro"
+  ],
+  "entry": "/vendor/js-tetris/index.html",
+  "repo": "https://github.com/jakesgordon/javascript-tetris",
+  "license": "MIT",
+  "stars": 733,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": true,
+  "fetched_at": "2026-08-30T12:49:22.311Z",
+  "_branch": "master",
+  "tip": {
+    "en": "The author published a full 'Tetris in JavaScript' tutorial alongside the code, which is cleanly split into game, piece and board modules — excellent value for learning and forking alike.",
+    "zh": "作者写了一整篇《如何用 JS 写俄罗斯方块》教程，代码分模块（game/piece/board），是学习 + 改装的性价比之选。"
+  },
+  "play": "https://jakesgordon.com/games/tetris/",
+  "size": "~10-200KB",
+  "tech": [
+    "原生JS",
+    "Canvas"
+  ]
+}

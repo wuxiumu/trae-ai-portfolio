@@ -1,0 +1,57 @@
+{
+  "total": 307,
+  "by_category": {
+    "awesome-lists": 110,
+    "games": 93,
+    "prompts": 4,
+    "coding-tools": 37,
+    "benchmarks": 1,
+    "agents": 5,
+    "integrations": 0,
+    "other": 57
+  },
+  "top_languages": [
+    {
+      "lang": "Python",
+      "count": 83
+    },
+    {
+      "lang": "JavaScript",
+      "count": 47
+    },
+    {
+      "lang": "Unknown",
+      "count": 44
+    },
+    {
+      "lang": "TypeScript",
+      "count": 34
+    },
+    {
+      "lang": "HTML",
+      "count": 18
+    },
+    {
+      "lang": "Rust",
+      "count": 13
+    },
+    {
+      "lang": "PHP",
+      "count": 11
+    },
+    {
+      "lang": "C++",
+      "count": 10
+    },
+    {
+      "lang": "Go",
+      "count": 9
+    },
+    {
+      "lang": "Shell",
+      "count": 7
+    }
+  ],
+  "last_updated": "2026-09-10T12:19:37+0800",
+  "source": "GitHub API v3"
+}

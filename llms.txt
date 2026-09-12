@@ -1,0 +1,29 @@
+# AI项目集 · trae-ai-portfolio
+
+> Python + LLM + PHP 全栈 AI 项目作品集：小红书内容流水线、AI生图、GPT聚合站、游戏开发。每日更新，本地物料不自动发帖。
+
+## 项目列表
+
+### 小红书多智能体工作流
+收集→判断→执行三智能体架构的内容生产流水线。16篇成品。
+- 技术栈：Python + LLM + Playwright + PHP
+- GitHub: https://github.com/wuxiumu/Xiaohongshu-multi-agent-workflow
+
+### AI蜡笔英语启蒙单词卡
+AI原创蜡笔风生图 + Pillow拼九页卡 + LLM文案。20词180张成品卡。
+- 技术栈：Python + Pillow + 百炼 + PHP
+- GitHub: https://github.com/wuxiumu/RED-content-pipeline-mass-produces
+
+### GPT-6 Hub 项目聚合站
+GitHub GPT-6/Astra/Codex生态项目聚合。Python爬虫+PHP后端+原生前端。
+
+### 无情报游戏
+游戏开发项目，包含游戏列表与相关文档。
+
+## 联系方式
+- Email: contact@chiguashentan.com
+- GitHub: https://github.com/wuxiumu
+
+## 约束
+- 系统不自动发帖，只产出本地待发布物料
+- 只用AI原创形象，禁用第三方IP

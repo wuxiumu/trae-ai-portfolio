@@ -1,0 +1,48 @@
+{
+  "schema": 2,
+  "slug": "emojimine",
+  "title": {
+    "en": "Emoji Minesweeper",
+    "zh": "Emoji 扫雷"
+  },
+  "summary": {
+    "en": "Minesweeper with emoji standing in for mines — a few hundred lines of code, fun straight out of the box.",
+    "zh": "把地雷换成 Emoji 的扫雷，几百行代码，开箱即玩。"
+  },
+  "description": {
+    "en": "Textbook Minesweeper: open cells, read the numbers for neighboring mines, right-click to flag the bombs, and clear every safe square to win.",
+    "zh": "经典扫雷规则：点开格子，数字表示周围雷数，右键标旗，清空所有非雷区域即胜利。"
+  },
+  "howto": {
+    "en": "Mouse — click to reveal, right-click to flag.",
+    "zh": "鼠标 / 点击"
+  },
+  "tip": {
+    "en": "The poster child for single-page mini-games: all logic lives in one HTML file. Swap the emoji for your mascot or brand icons and you have a custom Minesweeper at near-zero cost, with plenty of buzz.",
+    "zh": "单页小游戏典范，全部逻辑在一个 HTML 文件里。可以把 Emoji 换成站点 IP 形象/品牌图标，做定制版扫雷，成本低、话题性强。"
+  },
+  "categories": [
+    "puzzle"
+  ],
+  "tags": [
+    "原生js",
+    "emoji",
+    "mouse"
+  ],
+  "entry": "/vendor/emojimine/index.html",
+  "repo": "https://github.com/muan/emoji-minesweeper",
+  "play": "https://muan.github.io/emoji-minesweeper/",
+  "license": "MIT",
+  "stars": 907,
+  "size": "~10-200KB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": true,
+  "fetched_at": "2026-08-30T17:47:43.128Z",
+  "tech": [
+    "原生JS",
+    "Emoji"
+  ],
+  "_branch": null
+}

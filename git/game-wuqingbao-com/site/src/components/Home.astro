@@ -1,0 +1,55 @@
+---
+import Base from '../layouts/Base.astro';
+import GameCard from '../components/GameCard.astro';
+import { t } from '../i18n/index.js';
+import { langHref } from '../lib/nav.js';
+import { featuredGames, categories, categoryCounts } from '../data/loader.js';
+
+const { lang } = Astro.props;
+const href = (p) => langHref(lang, p);
+const featured = featuredGames();
+const counts = categoryCounts();
+const websiteJsonld = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: t(lang, 'siteName'),
+  alternateName: t(lang === 'zh' ? 'en' : 'zh', 'siteName'),
+  url: new URL(href('/'), Astro.url).href,
+  description: t(lang, 'tagline'),
+  inLanguage: lang === 'zh' ? 'zh-CN' : 'en',
+};
+---
+<Base lang={lang} currentPath={Astro.url.pathname} jsonld={[websiteJsonld]}>
+  <section class="hero">
+    <div class="wrap">
+      <h1>{t(lang, 'hero_title')}</h1>
+      <p class="lead">{t(lang, 'hero_sub')}</p>
+      <a class="btn btn-primary" href={href('/games')}>{t(lang, 'hero_cta')} →</a>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="section-head">
+      <h2>{t(lang, 'section_featured')}</h2>
+      <a class="more" href={href('/games')}>{t(lang, 'view_all')} →</a>
+    </div>
+    <div class="card-grid">
+      {featured.map((g) => <GameCard lang={lang} game={g} />)}
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="section-head">
+      <h2>{t(lang, 'section_categories')}</h2>
+    </div>
+    <div class="cat-row">
+      {categories.filter(c => (counts[c.id]||0) > 0).map((c) => (
+        <a class="cat-chip" href={href(`/categories/${c.id}`)}>
+          <span class="cat-icon" aria-hidden="true">{c.icon}</span>
+          <span>{c.name[lang] || c.name.en}</span>
+          <span class="cat-count">{counts[c.id] || 0}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+</Base>

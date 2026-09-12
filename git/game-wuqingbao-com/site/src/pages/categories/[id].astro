@@ -1,0 +1,20 @@
+---
+import GamesList from '../../components/GamesList.astro';
+import { categories } from '../../data/taxonomy.js';
+import { games } from '../../data/loader.js';
+
+export function getStaticPaths() {
+  return categories.map((c) => ({
+    params: { id: c.id },
+    props: { category: c, list: games.filter((g) => (g.categories || []).includes(c.id)) },
+  }));
+}
+const { category, list } = Astro.props;
+---
+<GamesList
+  lang="en"
+  games={list}
+  heading={category.name.en}
+  subheading={`${list.length} ${list.length === 1 ? 'game' : 'games'}`}
+  description={category.blurb.en}
+/>

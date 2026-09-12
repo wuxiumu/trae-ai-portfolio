@@ -1,0 +1,49 @@
+{
+  "schema": 2,
+  "slug": "snake",
+  "title": {
+    "en": "JavaScript Snake",
+    "zh": "贪吃蛇"
+  },
+  "summary": {
+    "en": "Classic Snake written in strikingly little code, with both wrap-around and solid-wall modes.",
+    "zh": "经典贪吃蛇，代码极简，支持穿墙与撞墙两种模式。"
+  },
+  "description": {
+    "en": "Steer with the arrow keys, eat food to grow longer and score higher. Touch your own tail and the run ends; the walls kill or wrap depending on the mode.",
+    "zh": "方向键控制蛇头，吃到食物身体变长得分，撞到自己或边界（可选穿墙）即结束。"
+  },
+  "howto": {
+    "en": "Arrow keys.",
+    "zh": "方向键"
+  },
+  "tip": {
+    "en": "One of the smallest entries at a few dozen kilobytes — zero loading friction. Tiny tweaks like an invincibility mode or speed power-ups spin it into fresh variants, so it gets reused endlessly.",
+    "zh": "体积最小的一类（几十 KB），加载零负担。可加「无敌模式」「加速道具」等小改动做变体，复用性极高。"
+  },
+  "categories": [
+    "casual",
+    "arcade"
+  ],
+  "tags": [
+    "原生js",
+    "html",
+    "keyboard"
+  ],
+  "entry": "/vendor/snake/index.html",
+  "repo": "https://github.com/patorjk/JavaScript-Snake",
+  "play": "https://patorjk.com/games/snake/",
+  "license": "MIT",
+  "stars": 598,
+  "size": "~10-200KB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": true,
+  "fetched_at": "2026-08-30T17:47:43.206Z",
+  "tech": [
+    "原生JS",
+    "HTML"
+  ],
+  "_branch": null
+}

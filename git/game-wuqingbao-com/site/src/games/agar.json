@@ -1,0 +1,51 @@
+{
+  "schema": 2,
+  "slug": "agar",
+  "title": {
+    "en": "Agar.io Clone",
+    "zh": "Agar.io 复刻"
+  },
+  "summary": {
+    "en": "Open-source clone of the classic io hit: swallow pellets, grow huge and outgrow every player around you.",
+    "zh": "经典 io 玩法《球球大作战》的开源实现，前后端齐全。"
+  },
+  "description": {
+    "en": "Steer your cell to gobble pellets and smaller players while dodging anything bigger than you. Split to dash at enemies or eject mass to make a quick escape.",
+    "zh": "控制小球吞噬周围颗粒与其他玩家变大，同时避免被更大的球吃掉；可分裂加速、喷射质量逃逸。"
+  },
+  "howto": {
+    "en": "Mouse or WASD.",
+    "zh": "鼠标 / WASD"
+  },
+  "tip": {
+    "en": "Needs a Node backend (Socket.IO) — one of the few entries that requires deploying a server. Io games lead on session time and social spread, ideal as the centerpiece of a site-wide lobby.",
+    "zh": "需要 Node 服务端（Socket.IO），是收录里少数要部署后端的。io 类游戏在线时长和社交传播效果最好，适合做站内「大厅」主打位。"
+  },
+  "categories": [
+    "arena",
+    "arcade"
+  ],
+  "tags": [
+    "node-js",
+    "socket-io",
+    "canvas",
+    "mouse"
+  ],
+  "entry": "",
+  "repo": "https://github.com/owenashurst/agar.io-clone",
+  "play": "",
+  "license": "MIT",
+  "stars": 2971,
+  "size": "~1-5MB",
+  "server": true,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": false,
+  "fetched_at": null,
+  "tech": [
+    "Node.js",
+    "Socket.IO",
+    "Canvas"
+  ],
+  "_branch": null
+}

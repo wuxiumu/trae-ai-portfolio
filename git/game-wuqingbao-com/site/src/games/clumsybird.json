@@ -1,0 +1,48 @@
+{
+  "schema": 2,
+  "slug": "clumsybird",
+  "title": {
+    "en": "Clumsy Bird",
+    "zh": "笨拙的小鸟"
+  },
+  "summary": {
+    "en": "A melonJS-powered Flappy Bird clone that faithfully recreates the original's feel and look.",
+    "zh": "《Flappy Bird》的 melonJS 引擎复刻版，手感与画风高度还原。"
+  },
+  "description": {
+    "en": "Tap or press space to flap upward, release and let gravity pull you back down, threading the gaps between pipes. Clip a pipe or hit the ground and it's over — one point per pipe cleared.",
+    "zh": "点击/空格让小鸟拍翅上升，松手下落，穿过水管之间的空隙，撞管或落地即结束，过一根得一分。"
+  },
+  "howto": {
+    "en": "Space or click/tap to flap.",
+    "zh": "空格 / 点击"
+  },
+  "tip": {
+    "en": "The quintessential rage game — players love bragging about their scores, so sharing rates run high. Built on melonJS, it re-skins easily: swap the bird and pipe sprites and you have a fresh title.",
+    "zh": "虐心类代表，分享率高（晒分数）。基于 melonJS，换皮容易：替换小鸟与水管贴图就是一款新游戏。"
+  },
+  "categories": [
+    "casual"
+  ],
+  "tags": [
+    "melonjs",
+    "canvas",
+    "touch"
+  ],
+  "entry": "/vendor/clumsybird/index.html",
+  "repo": "https://github.com/ellisonleao/clumsy-bird",
+  "play": "https://ellisonleao.github.io/clumsy-bird/",
+  "license": "MIT",
+  "stars": 1620,
+  "size": "~1-5MB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": true,
+  "fetched": true,
+  "fetched_at": "2026-08-30T17:47:43.778Z",
+  "tech": [
+    "melonJS",
+    "Canvas"
+  ],
+  "_branch": null
+}

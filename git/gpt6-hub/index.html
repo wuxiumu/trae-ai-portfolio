@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>GPT-6 Hub · 项目聚合与消息流</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <!-- 固定头部 -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="header-left">
+        <h1>🚀 GPT-6 Hub</h1>
+        <span class="tagline">GPT-6 / Astra 项目聚合</span>
+      </div>
+      <div id="stats" class="stats-bar">加载中...</div>
+    </div>
+  </header>
+
+  <!-- 吸顶导航 -->
+  <nav class="nav-bar">
+    <div class="container">
+      <div id="filter-bar" class="nav-tabs">
+        <button data-cat="all" class="active">全部 <span class="count">-</span></button>
+        <button data-cat="awesome-lists">精选清单 <span class="count">-</span></button>
+        <button data-cat="games">游戏 <span class="count">-</span></button>
+        <button data-cat="prompts">提示词 <span class="count">-</span></button>
+        <button data-cat="coding-tools">编码工具 <span class="count">-</span></button>
+        <button data-cat="benchmarks">基准测试 <span class="count">-</span></button>
+        <button data-cat="agents">AI Agent <span class="count">-</span></button>
+        <button data-cat="integrations">集成应用 <span class="count">-</span></button>
+        <button data-cat="other">其他 <span class="count">-</span></button>
+        <button data-view="news" class="nav-news">📡 消息流 <span class="count">-</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- 仓库视图 -->
+    <div id="repos-view" class="view-section">
+      <div class="toolbar">
+        <input type="search" id="search" placeholder="🔍 搜索仓库名 / 描述...">
+        <div id="sort-bar" class="sort-tabs">
+          <button data-sort="stars" class="active">⭐ Star</button>
+          <button data-sort="updated">🕐 更新</button>
+          <button data-sort="name">📝 名称</button>
+          <button id="order-toggle" data-order="desc" class="order-btn">↓ 倒序</button>
+        </div>
+      </div>
+      <section id="repos" class="repo-grid">
+        <div class="loading">⏳ 加载仓库数据...</div>
+      </section>
+    </div>
+
+    <!-- 消息流视图 -->
+    <div id="news-view" class="view-section" hidden>
+      <section class="news-section">
+        <div id="news-list" class="news-list">
+          <div class="loading">⏳ 加载消息...</div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="site-footer">
+      <p>由 Python 爬虫 + Hermes Agent 驱动 · <a href="https://github.com/wuxiumu/gpt6-hub" target="_blank">源码</a></p>
+    </footer>
+  </div>
+
+  <!-- 项目解读弹窗 -->
+  <div id="insight-modal" class="modal-overlay" hidden>
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2 id="modal-title">项目解读</h2>
+        <button class="modal-close" onclick="closeInsight()">&times;</button>
+      </div>
+      <div id="modal-body" class="modal-body">
+        <div class="loading">加载解读中...</div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="closeInsight()">关闭</button>
+        <a id="modal-visit" class="btn-primary" href="#" target="_blank" rel="noopener">访问仓库 →</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

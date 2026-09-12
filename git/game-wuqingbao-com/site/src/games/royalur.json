@@ -1,0 +1,48 @@
+{
+  "schema": 2,
+  "slug": "royalur",
+  "title": {
+    "en": "Royal Game of Ur",
+    "zh": "乌尔王室棋"
+  },
+  "summary": {
+    "en": "A modern web edition of the Royal Game of Ur — one of the oldest board games known — with online play.",
+    "zh": "人类最古老的棋盘游戏之一（乌尔王室棋）的现代网页版，支持线上对战。"
+  },
+  "description": {
+    "en": "Roll the dice to set your move, race your pieces along the path, and land on a rival piece to send it back to the start. Get all of yours home first to win.",
+    "zh": "掷骰决定步数，棋子沿棋盘路径前进，踩到对方棋子可将其送回起点，全部棋子走完终点即胜。"
+  },
+  "howto": {
+    "en": "Mouse — click to roll and to move.",
+    "zh": "鼠标 / 点击"
+  },
+  "tip": {
+    "en": "Niche gameplay but rich in history — a great anchor for an 'ancient games of the world' series. It already ships online rooms, so the matchmaking layer can be reused in your own lobby.",
+    "zh": "玩法小众但历史感强，适合做「世界古棋」系列内容。已带线上房间功能，可直接复用到自己的联机大厅。"
+  },
+  "categories": [
+    "board"
+  ],
+  "tags": [
+    "typescript",
+    "canvas",
+    "mouse"
+  ],
+  "entry": "",
+  "repo": "https://github.com/RoyalUr/RoyalUr.net",
+  "play": "https://royalur.net",
+  "license": "MIT",
+  "stars": 174,
+  "size": "~200KB-1MB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": false,
+  "fetched_at": null,
+  "tech": [
+    "TypeScript",
+    "Canvas"
+  ],
+  "_branch": null
+}

@@ -1,0 +1,47 @@
+{
+  "schema": 2,
+  "slug": "2048",
+  "title": {
+    "en": "2048",
+    "zh": "2048"
+  },
+  "summary": {
+    "en": "Slide tiles, merge matching numbers and chase the 2048 tile — the viral puzzle that became H5 gaming's Hello World.",
+    "zh": "风靡全球的数字合并游戏，H5 小游戏的「Hello World」，代码短得可以逐行读完。"
+  },
+  "description": {
+    "en": "Gabriele Cirulli's original 2048 — the game that kicked off a hundred clones. Written in vanilla JavaScript with zero build step, MIT-licensed, and still the reference implementation for puzzle-game clarity.",
+    "zh": "4×4 棋盘，方向键滑动，相同数字碰撞合并，每次移动随机生成 2 或 4。凑出 2048 即通关，也可以继续玩到棋盘填满为止。"
+  },
+  "howto": {
+    "en": "Arrow keys or WASD; swipe on mobile. Matching numbers merge when they collide.",
+    "zh": "电脑端方向键或 WASD；手机端滑动手势。相同数字碰撞合并升级。"
+  },
+  "tip": {
+    "en": "Re-skinning costs almost nothing: change the CSS palette and the title and it becomes your own brand. Touch events ship built in with smooth gestures — the single best opener for driving traffic.",
+    "zh": "改皮肤成本极低：只改 CSS 配色 + 替换标题就能变成自有品牌。移动端 touch 事件已内置，手势流畅，是做站引流的最佳开局游戏。"
+  },
+  "categories": [
+    "puzzle"
+  ],
+  "tags": [
+    "原生js",
+    "css3",
+    "keyboard",
+    "touch"
+  ],
+  "entry": "/vendor/2048/index.html",
+  "repo": "https://github.com/gabrielecirulli/2048",
+  "play": "https://play2048.co/",
+  "license": "MIT",
+  "stars": 13367,
+  "size": "~10-200KB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": true,
+  "fetched": true,
+  "tech": [
+    "原生JS",
+    "CSS3"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "schema": 2,
+  "slug": "trex",
+  "title": {
+    "en": "T-Rex Runner",
+    "zh": "恐龙跑酷"
+  },
+  "summary": {
+    "en": "The Chrome offline dino, taken straight from the Chromium source — as authentic as it gets.",
+    "zh": "从 Chromium 源码里扒出来的断网小恐龙，原汁原味还原。"
+  },
+  "description": {
+    "en": "Leap over cacti with space or up, duck under pterodactyls by holding down. The farther you run the higher you score, and the game keeps speeding up.",
+    "zh": "空格或上键跳跃躲仙人掌，按住下键下蹲躲飞鸟，跑得越远分越高，速度持续加快。"
+  },
+  "howto": {
+    "en": "Space or up arrow to jump, down arrow to duck.",
+    "zh": "空格 / 上键"
+  },
+  "tip": {
+    "en": "The most universally recognized mini-game on the list — zero tutorial needed, fun for every age. Pure static files that host anywhere in one click, and it makes a delightful 404-page easter egg.",
+    "zh": "国民认知度最高的小游戏，无需教程、老少皆宜。纯静态文件，可整站一键托管；也适合做成 404 页面的彩蛋。"
+  },
+  "categories": [
+    "casual",
+    "arcade"
+  ],
+  "tags": [
+    "原生js",
+    "canvas",
+    "touch"
+  ],
+  "entry": "/vendor/trex/index.html",
+  "repo": "https://github.com/wayou/t-rex-runner",
+  "play": "https://wayou.github.io/t-rex-runner/",
+  "license": "MIT",
+  "stars": 2177,
+  "size": "~10-200KB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": true,
+  "fetched": true,
+  "fetched_at": "2026-08-30T17:47:43.160Z",
+  "tech": [
+    "原生JS",
+    "Canvas"
+  ],
+  "_branch": null
+}

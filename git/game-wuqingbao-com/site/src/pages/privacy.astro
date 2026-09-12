@@ -1,0 +1,115 @@
+---
+import Base from '../layouts/Base.astro';
+import { t } from '../i18n/index.js';
+
+const lang = 'en';
+const lastUpdated = '2026-08-31';
+const siteOrigin = 'https://game.wuqingbao.com';
+---
+<Base lang={lang} title="Privacy Policy" description="How H5 Arcade handles cookies, analytics, third-party ads, player data, and requests from rights-holders and visitors. Updated August 2026." currentPath="/privacy">
+  <div class="wrap info-page">
+    <h1>Privacy Policy</h1>
+    <p class="lead">Last updated: <strong>{lastUpdated}</strong> · Effective for <strong>{siteOrigin}</strong> (H5 Arcade). This page describes exactly what information is collected, by whom, how it is used, and who to contact about it.</p>
+
+    <section>
+      <h2>1. Introduction &amp; owner of the processing</h2>
+      <p>H5 Arcade ("the Site", "we", "us") is an independent, hobby-maintained website operated from within the People's Republic of China. For the purposes of applicable privacy regulations — including the GDPR for European visitors and PIPL for visitors in China — the data controller and primary point of contact is the site maintainers, reachable at <a href="mailto:hello@game.wuqingbao.com">hello@game.wuqingbao.com</a>.</p>
+      <p>Our fundamental position is simple: <strong>we want as little data about you as we can reasonably run a website on.</strong> We do not sell data. We do not share data with advertisers. We do not run cross-site identity trackers. When we do collect something, we explain why it is collected, where it goes, and how long it stays — and we give you a way to opt out.</p>
+    </section>
+
+    <section>
+      <h2>2. Information we collect automatically</h2>
+      <h3>2.1 Server access logs</h3>
+      <p>Like essentially every website on the internet, the static hosting provider that serves game.wuqingbao.com writes an access log for each HTTP request. A single log line contains:</p>
+      <ul>
+        <li>the requesting IP address (or a truncated / anonymized form of it, depending on provider defaults);</li>
+        <li>the requested URL, HTTP method, status code and response size;</li>
+        <li>the timestamp and (optionally) the Referer and User-Agent headers your browser sends.</li>
+      </ul>
+      <p>These logs are used solely to diagnose outages, detect abuse (scrapers hammering individual assets, brute-force scans, etc.), and for very coarse traffic sizing ("how many visits did we get last week?"). They are <em>not</em> linked to individual people, not cross-referenced with any other source, and are typically rotated within <strong>14 to 30 days</strong> depending on the hosting provider's policy.</p>
+
+      <h3>2.2 Browser storage: localStorage and cookies</h3>
+      <p>The <em>games</em> you play inside the iframes use the browser's <code>localStorage</code> (and sometimes <code>indexedDB</code>) on their own — for progress, high scores, settings like volume, language or tile themes. This storage is scoped to the <code>/vendor/&lt;game-slug&gt;/</code> origin path of the iframe, so Game A can't read Game B's saved data, and the outer site can't read any iframe scoped storage at all. These are <em>first-party game saves</em>, not tracking cookies. You can clear them any time in your browser's site-data settings.</p>
+      <p>The outer <strong>site</strong> itself (the shell pages you are reading right now) <em>does not set any cookies on its own</em>. The only cookies that can be present on the <code>game.wuqingbao.com</code> domain come from third-party integrations which are only loaded when the site maintainers have explicitly opted into them, described in the next section.</p>
+    </section>
+
+    <section>
+      <h2>3. Optional analytics: Umami</h2>
+      <p>When (and only when) the site maintainers configure Umami during the build, we load a small, privacy-respecting analytics script from either <em>cloud.umami.is</em> or a self-hosted Umami instance at a subdomain of game.wuqingbao.com. Umami is explicitly configured in its "anonymize IP" mode and does <em>not</em> store any persistent client-side identifier. This satisfies ePrivacy rules: because no cross-session identifier is placed, there is no tracking cookie to consent-gate under the GDPR.</p>
+      <div class="card">
+        <h3>What Umami collects, and for how long</h3>
+        <ul style="margin-bottom: 0;">
+          <li>Per page view: the page path, the referrer, the browser's language, screen dimensions, country-level geo-IP, and the User-Agent, <em>all aggregated and not linked to an individual</em>.</li>
+          <li>Per event, only things the site explicitly records (e.g. a Play click on a specific game).</li>
+          <li><strong>No</strong> cross-site identifiers, <strong>no</strong> device fingerprints, <strong>no</strong> browser extension sniffing, <strong>no</strong> ad network synchronisation.</li>
+          <li>Retention: the maintainers configure Umami for <strong>12 months of retention</strong> after which raw events are dropped and only aggregate totals remain.</li>
+        </ul>
+      </div>
+      <p>If Umami is currently enabled for this build, it will appear as a single <code>&lt;script defer src="…/script.js" data-website-id="…"&gt;</code> tag in the page &lt;head&gt;. To disable it entirely, enable your browser's generic tracking-protection (uBlock Origin, Safari Privacy, Brave Shields all block Umami by default) or simply turn JavaScript off for the site — every page, including all game listings and this policy, renders perfectly without JavaScript. JavaScript is only used by the games themselves and the optional live-search box on list pages.</p>
+    </section>
+
+    <section>
+      <h2>4. Third-party advertising: Google AdSense and similar</h2>
+      <p>This section exists to be transparent: at the moment of writing, <strong>we do not serve any ads</strong>. Nevertheless, if in the future the maintainers choose to enable Google AdSense (or a similar program) to cover hosting costs, the following applies from the moment AdSense is turned on, and you should assume it in any Google AdSense review you perform on this site:</p>
+      <ul>
+        <li>Google, as a third-party vendor, uses cookies to serve ads on this site.</li>
+        <li>Google's use of advertising cookies enables it and its partners to show you ads based on your visits to this site and/or other sites on the Internet.</li>
+        <li>You can opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" rel="noopener">Google's Ads Settings</a> and — for partners using the NAI — the <a href="https://www.networkadvertising.org/managing/opt_out.asp" rel="noopener">NAI opt-out page</a>.</li>
+        <li>A list of all third-party ad vendors we work with (initially: just Google) will be kept on this page, along with links to their own privacy policies and opt-out mechanisms.</li>
+        <li>Third-party ad servers or ad networks use technology to send, directly to your browser, the advertisements and links that appear on H5 Arcade. They automatically receive your IP address when this happens. They may also use other technologies (such as cookies, JavaScript, or web beacons) to measure the effectiveness of their advertisements and to personalize the advertising content you see.</li>
+        <li>H5 Arcade has no access to or control over these cookies that are used by third-party advertisers.</li>
+      </ul>
+      <p>We will keep this policy's change log (Section 9) up to date when, and only when, ad serving is actually enabled. You should not assume ads are running just because this section exists; this section is for transparency with ad-network reviewers who require these paragraphs on file before approving a site.</p>
+    </section>
+
+    <section>
+      <h2>5. Information we do <em>not</em> collect</h2>
+      <ul>
+        <li>We do not ask you for an account, an email, a phone number, or a real name to play games or browse listings.</li>
+        <li>We do not build cross-site profiles. We do not participate in Real-Time Bidding exchanges. We do not sync UIDs with ad partners.</li>
+        <li>We do not record keystrokes, mouse movement, game inputs or high scores on our servers. All of that stays in the iframe's localStorage on your own device, inside the game code.</li>
+        <li>We do not embed social media widgets, share counters, sign-in-with buttons, or any other third-party component that contacts social platforms on page load.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. Data subject rights (GDPR, PIPL, CCPA/CPRA)</h2>
+      <p>Under GDPR (EU / UK / EEA), PIPL (China), and CCPA/CPRA (California), you have the right to access, correct, delete, port, or object to the processing of personal data we hold about you. Given the intentionally minimal nature of the processing above, the practical answer is usually the same:</p>
+      <dl>
+        <dt>Right of access &amp; data portability</dt>
+        <dd>Send us an email. We will export any server-log rows associated with a specific IP you can identify, plus any Umami event rows we can reasonably match to a User-Agent / IP window you specify. Note that because we intentionally do <em>not</em> store per-user identifiers, there are limits to how well rows can be de-aggregated.</dd>
+        <dt>Right to erasure (right to be forgotten)</dt>
+        <dd>Again, email us with as much context as you can and we will purge the specific log/event rows you identify. Storage beyond what we described in Section 2 / 3 does not exist.</dd>
+        <dt>Right to object &amp; right to restrict processing</dt>
+        <dd>Disable JavaScript or block the Umami script via your ad-blocker. Because no processing is contingent on tracking, you are not penalized for opting out — the site works identically without it.</dd>
+        <dt>Automated decision making / profiling</dt>
+        <dd>We do not do any. There is no credit scoring, recommender system, or classification system producing legal or similarly significant effects on visitors.</dd>
+      </dl>
+      <p>For visitors in China specifically: you also have the right to withdraw consent to processing at any time, and to receive a copy of your personal information in a commonly-readable format. Write to the address above and we will handle these requests in line with PIPL timelines.</p>
+    </section>
+
+    <section>
+      <h2>7. International transfers</h2>
+      <p>The Site's primary deployment target is a static hosting provider whose servers are physically located outside of China (commonly Germany or Singapore, depending on the provider used for any given deployment). Server access logs and Umami analytics events therefore cross borders in the ordinary course of serving the site. We rely on standard contractual clauses / adequacy decisions where applicable, and — again — the data being transferred is by design as thin as we can make it: aggregated page views, no personal profiles.</p>
+    </section>
+
+    <section>
+      <h2>8. Minors and children</h2>
+      <p>H5 Arcade is designed and marketed as a general-interest arcade site for players of all ages. That said, a number of the upstream open-source projects we link to carry a "13+" or "T for Teen" note in their READMEs, and we never knowingly ask children under the age that applies in their jurisdiction for personal information. If you are a parent or guardian and you believe we have inadvertently collected data from your child, please contact us and we will delete it within one business day.</p>
+    </section>
+
+    <section>
+      <h2>9. Changes to this policy</h2>
+      <p>We post material changes to this page with an updated "Last updated" line at the top, and — when the change is about advertising or third-party tracking — we additionally add a prominent notice on the homepage for at least 30 days. Non-material changes (grammar fixes, typo correction, re-ordering) do not get a homepage notice.</p>
+      <p>Short change log for reference:</p>
+      <ul>
+        <li><strong>{lastUpdated}</strong> — Initial version published alongside the site's About and Contact pages.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>10. Contact for privacy questions</h2>
+      <p>For any question about this policy, to exercise a right listed in Section 6, to report a security or privacy incident, or to request takedown of personal data we may have published in error, write to <a href="mailto:hello@game.wuqingbao.com">hello@game.wuqingbao.com</a> and include the word "Privacy" in the subject line. We will acknowledge receipt within one business day and respond substantively within a week.</p>
+    </section>
+  </div>
+</Base>

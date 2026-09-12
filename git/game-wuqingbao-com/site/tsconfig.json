@@ -1,0 +1,5 @@
+{
+  "extends": "astro/tsconfigs/base",
+  "include": ["src/**/*", ".astro/data-store.json"],
+  "exclude": ["node_modules", "dist", "public/games/**/*"]
+}

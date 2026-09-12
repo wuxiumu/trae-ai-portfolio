@@ -1,0 +1,48 @@
+{
+  "schema": 2,
+  "slug": "css-sweeper",
+  "title": {
+    "en": "CSS Minesweeper",
+    "zh": "CSS 扫雷"
+  },
+  "summary": {
+    "en": "The world's first Minesweeper implemented in pure CSS with no JavaScript.",
+    "zh": "一行 JavaScript 都没有的扫雷，纯 CSS 实现的交互逻辑。"
+  },
+  "description": {
+    "en": "Classic Minesweeper rules, yet every interaction — revealing cells, flagging mines, even win/lose detection — runs on CSS Space Toggles wired to checkboxes and sibling selectors, with not a line of JavaScript.",
+    "zh": "用 Space Toggle 技巧配合 checkbox + 兄弟选择器完成翻格、标旗、胜负判定，玩法与经典扫雷一致。"
+  },
+  "howto": {
+    "en": "Click cells to reveal, right-click to flag mines.",
+    "zh": "左键揭示格子，右键插旗标雷。"
+  },
+  "categories": [
+    "puzzle",
+    "casual"
+  ],
+  "tags": [
+    "mouse",
+    "minimalist",
+    "brainy"
+  ],
+  "entry": "/vendor/css-sweeper/index.html",
+  "repo": "https://github.com/propjockey/css-sweeper",
+  "license": "BSD-2-Clause",
+  "stars": 857,
+  "added": "2026-08-30",
+  "featured": true,
+  "fetched": true,
+  "fetched_at": "2026-08-30T12:51:18.599Z",
+  "_branch": "master",
+  "tip": {
+    "en": "A killer tech-flex marketing asset — pair the launch with a 'how does zero-JS Minesweeper work' write-up. The catch: fixed difficulty and no dynamic mine generation, so treat it as a novelty headline entry.",
+    "zh": "极强的「技术流」营销素材：可以写一篇《零 JS 的扫雷是怎么做到的》配合上线。缺点是难度固定、无法动态生成雷区，适合当噱头条目。"
+  },
+  "play": "https://propjockey.github.io/css-sweeper/",
+  "size": "~10-200KB",
+  "tech": [
+    "纯CSS",
+    "HTML"
+  ]
+}

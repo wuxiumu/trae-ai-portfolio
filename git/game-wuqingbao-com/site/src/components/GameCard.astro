@@ -1,0 +1,37 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import { categoryName } from '../data/taxonomy.js';
+import { langHref } from '../lib/nav.js';
+
+const { lang, game } = Astro.props;
+const href = (p) => langHref(lang, p);
+const title = game.title[lang] || game.title.en;
+const summary = game.summary[lang] || game.summary.en;
+const zhPending = lang === 'zh' && !(game.summary && game.summary.zh);
+const primaryCat = (game.categories || [])[0];
+const coverEmoji = ({ arcade:'🕹️', puzzle:'🧩', board:'🎲', casual:'⚡', arena:'🎯', sports:'⚽', music:'🎵', adventure:'🗺️', retro:'👾' })[primaryCat] || '🎮';
+// Covers are optional local files: public/covers/<slug>.png (screenshots taken per game).
+const coverPath = path.join(process.cwd(), 'public', 'covers', `${game.slug}.png`);
+const hasCover = Boolean(game.cover) || fs.existsSync(coverPath);
+const coverSrc = game.cover || `/covers/${game.slug}.png`;
+---
+<a class="game-card" href={href(`/games/${game.slug}`)} data-slug={game.slug}>
+  <div class="card-cover" data-slug={game.slug}>
+    {hasCover
+      ? <img src={coverSrc} alt="" loading="lazy" width="1023" height="480" />
+      : <span class="cover-emoji" aria-hidden="true">{coverEmoji}</span>}
+    {zhPending && <span class="zh-pending">🈶 中文待补</span>}
+    {!game.fetched && game.play && <span class="status-badge">🔗 {lang==='zh'?'外链试玩':'External'}</span>}
+    {game.fetched && <span class="status-badge badge-play">▶ {lang==='zh'?'本地可玩':'Playable'}</span>}
+  </div>
+  <div class="card-body">
+    <h3 class="card-title">{title}</h3>
+    <p class="card-summary">{summary}</p>
+    <div class="card-meta">
+      <span class="pill">★ {(game.stars||0).toLocaleString()}</span>
+      <span class="pill">{game.license || 'MIT'}</span>
+      {primaryCat && <span class="pill pill-cat">{categoryName(lang, primaryCat)}</span>}
+    </div>
+  </div>
+</a>

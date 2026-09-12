@@ -1,0 +1,49 @@
+{
+  "schema": 2,
+  "slug": "hextris",
+  "title": {
+    "en": "Hextris",
+    "zh": "Hextris"
+  },
+  "summary": {
+    "en": "Hexagon-flavored arcade puzzler: spin a central hex to stack and clear incoming colored blocks.",
+    "zh": "六边形版俄罗斯方块，下落的多边形围绕中心堆叠，越玩越上瘾。"
+  },
+  "description": {
+    "en": "Colored blocks fall inward on every face of the hexagon; rotate left and right to line up three or more of one color and clear them. Survive 60 seconds and everything speeds up — let the ring fill and it's done.",
+    "zh": "彩色方块从六边形外圈掉落，左右旋转让同色块三连以上消除。支撑 60 秒就会加速，堆到外圈即结束。"
+  },
+  "howto": {
+    "en": "Left/right arrow keys to rotate; swipe on touch screens.",
+    "zh": "方向键控制旋转与落下，触屏可滑动。"
+  },
+  "tip": {
+    "en": "Distinctive visuals and lovely colors make it a natural signature game for the front page. The official demo site goes down now and then — host your own copy on GitHub Pages or your CDN.",
+    "zh": "视觉辨识度高、配色漂亮，适合放在首页做「招牌游戏」。官方 demo 站点偶发不可用，建议 clone 后用 GitHub Pages 或自己的 CDN 重新托管一份。"
+  },
+  "categories": [
+    "puzzle",
+    "arcade"
+  ],
+  "tags": [
+    "原生js",
+    "canvas",
+    "keyboard"
+  ],
+  "entry": "/vendor/hextris/index.html",
+  "repo": "https://github.com/Hextris/hextris",
+  "play": "",
+  "license": "GPL-3.0",
+  "stars": 2434,
+  "size": "~200KB-1MB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": true,
+  "fetched": true,
+  "fetched_at": "2026-08-30T04:26:18.573Z",
+  "tech": [
+    "原生JS",
+    "Canvas"
+  ],
+  "_branch": "gh-pages"
+}

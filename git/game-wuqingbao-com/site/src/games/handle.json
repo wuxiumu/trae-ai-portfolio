@@ -1,0 +1,48 @@
+{
+  "schema": 2,
+  "slug": "handle",
+  "title": {
+    "en": "Handle: Hanzi Wordle",
+    "zh": "汉字 Wordle"
+  },
+  "summary": {
+    "en": "Wordle for Chinese characters: one four-character word a day, graded on initials, finals and tones.",
+    "zh": "中文版 Wordle：每天猜一个四字词语，声母韵母声调全都要对。"
+  },
+  "description": {
+    "en": "Six guesses at a four-character word. Each submit reveals, per character, whether the pinyin initial, final and tone hit and whether the position is right — all green means perfect.",
+    "zh": "六次机会猜一个四字词语，提交后每个字会显示声母、韵母、声调是否命中及位置是否正确，绿色为全对。"
+  },
+  "howto": {
+    "en": "Type your guess with the keyboard.",
+    "zh": "键盘输入"
+  },
+  "tip": {
+    "en": "Word games beg to be shared (those score grids, obviously), and the viral cost is low. The Vue codebase is well organized, so swapping the word list or adding idiom and poetry modes is a cheap way to stand out.",
+    "zh": "文字类游戏天然适合做社交分享（成绩方块图），传播成本低。Vue 工程化完善，改词库、加「成语模式」「诗词模式」很容易做出差异化。"
+  },
+  "categories": [
+    "puzzle",
+    "casual"
+  ],
+  "tags": [
+    "vue",
+    "vite"
+  ],
+  "entry": "/vendor/handle/index.html",
+  "repo": "https://github.com/antfu/handle",
+  "play": "https://handle.antfu.me",
+  "license": "MIT",
+  "stars": 1439,
+  "size": "~200KB-1MB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": true,
+  "fetched_at": "2026-08-30T18:19:36.096Z",
+  "tech": [
+    "Vue",
+    "Vite"
+  ],
+  "_branch": null
+}

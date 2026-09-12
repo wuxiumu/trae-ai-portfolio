@@ -1,0 +1,48 @@
+{
+  "schema": 2,
+  "slug": "c4",
+  "title": {
+    "en": "Connect Four",
+    "zh": "Connect Four"
+  },
+  "summary": {
+    "en": "Browser Connect Four: play a friend or take on the built-in computer AI.",
+    "zh": "四子棋（Connect Four），支持双人对战与电脑 AI。"
+  },
+  "description": {
+    "en": "Take turns dropping discs from the top; each one falls to the lowest open slot in its column. First to line up four in any direction — across, down or diagonal — wins.",
+    "zh": "轮流从顶部投子，棋子落到该列最底部。先在横、竖、斜任意方向连成四子者获胜。"
+  },
+  "howto": {
+    "en": "Mouse — click a column to drop your disc.",
+    "zh": "鼠标 / 点击"
+  },
+  "tip": {
+    "en": "A zero-dependency Canvas build whose AI logic is easy to swap out for something stronger. Bolt on WebSocket and it becomes online versus play — a low-cost springboard from single-player to multiplayer.",
+    "zh": "零依赖 Canvas 实现，AI 逻辑可单独换强。接 WebSocket 就能升级成在线对战，是从单机走向联机的低成本跳板。"
+  },
+  "categories": [
+    "puzzle"
+  ],
+  "tags": [
+    "原生js",
+    "canvas",
+    "mouse"
+  ],
+  "entry": "/vendor/c4/index.html",
+  "repo": "https://github.com/kenrick95/c4",
+  "play": "https://kenrick95.github.io/c4/",
+  "license": "MIT",
+  "stars": 280,
+  "size": "~10-200KB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": true,
+  "fetched_at": "2026-08-30T18:19:36.186Z",
+  "tech": [
+    "原生JS",
+    "Canvas"
+  ],
+  "_branch": null
+}

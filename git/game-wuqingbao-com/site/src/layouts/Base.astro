@@ -1,0 +1,90 @@
+---
+// Base layout — chrome shared by every page.
+import { t } from '../i18n/index.js';
+import { langHref, alternateHref } from '../lib/nav.js';
+
+const { lang, title: pageTitle = '', currentPath = '/', description = '', jsonld = [], image = '' } = Astro.props;
+const href = (p) => langHref(lang, p);
+const alt = alternateHref(Astro.url.pathname);
+const canonical = Astro.url.href;
+const altAbs = new URL(alt, Astro.url).href;
+const enAbs = lang === 'zh' ? altAbs : canonical;
+const ogLocale = lang === 'zh' ? 'zh_CN' : 'en_US';
+const imageAbs = image ? new URL(image, Astro.url).href : '';
+
+// Umami analytics — only injected on production builds when both env vars are set.
+// Example for a self-hosted Umami at stats.yourdomain.com:
+//   PUBLIC_UMAMI_SRC=https://stats.yourdomain.com/script.js
+//   PUBLIC_UMAMI_ID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+const umamiSrc = import.meta.env.PUBLIC_UMAMI_SRC || '';
+const umamiId = import.meta.env.PUBLIC_UMAMI_ID || '';
+const useUmami = import.meta.env.PROD && umamiSrc && umamiId;
+
+// Google AdSense — only injected on production builds when the publisher ID
+// is set. Leave empty during local dev / preview so test hits do not count
+// against live ad serving or inflate verification traffic.
+//   PUBLIC_ADSENSE_CLIENT=ca-pub-XXXXXXXXXXXXXXXX
+const adsenseClient = import.meta.env.PUBLIC_ADSENSE_CLIENT || '';
+const useAdsense = import.meta.env.PROD && adsenseClient.startsWith('ca-pub-');
+const adsenseSrc = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}`;
+---
+<!doctype html>
+<html lang={lang === 'zh' ? 'zh-CN' : 'en'}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{pageTitle ? `${pageTitle} · ` : ''}{t(lang, 'siteName')}</title>
+    <meta name="description" content={description || t(lang, 'tagline')} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang={lang} href={canonical} />
+    <link rel="alternate" hreflang={lang === 'zh' ? 'en' : 'zh'} href={altAbs} />
+    <link rel="alternate" hreflang="x-default" href={enAbs} />
+    <meta property="og:site_name" content={t(lang, 'siteName')} />
+    <meta property="og:title" content={pageTitle || t(lang, 'siteName')} />
+    <meta property="og:description" content={description || t(lang, 'tagline')} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:locale:alternate" content={lang === 'zh' ? 'en_US' : 'zh_CN'} />
+    {imageAbs && <meta property="og:image" content={imageAbs} />}
+    <meta name="twitter:card" content={imageAbs ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={pageTitle || t(lang, 'siteName')} />
+    <meta name="twitter:description" content={description || t(lang, 'tagline')} />
+    {imageAbs && <meta name="twitter:image" content={imageAbs} />}
+    {jsonld.length > 0 && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%F0%9F%8E%AE%3C/text%3E%3C/svg%3E" />
+    {useUmami && <script defer src={umamiSrc} data-website-id={umamiId} />}
+    {useAdsense && <script async src={adsenseSrc} crossorigin="anonymous" />}
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href={href('/')}>
+          <span class="brand-icon">🎮</span>
+          <span class="brand-text">{t(lang, 'siteName')}</span>
+        </a>
+        <nav class="site-nav">
+          <a href={href('/games')} class={currentPath.startsWith('/games') || currentPath.startsWith('/zh/games') ? 'active' : ''}>{t(lang, 'nav_games')}</a>
+          <a href={href('/')} class={currentPath === '/' || currentPath === '/zh/' ? 'active' : ''}>{t(lang, 'nav_home')}</a>
+        </nav>
+        <a class="lang-toggle" href={alt}>{t(lang, 'lang_toggle')}</a>
+      </div>
+    </header>
+    <main class="site-main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>{t(lang, 'footer_note')}</p>
+        <nav class="footer-links" aria-label={t(lang, 'footer_about')}>
+          <a href={href('/about')}>{t(lang, 'footer_about')}</a>
+          <span aria-hidden="true">·</span>
+          <a href={href('/contact')}>{t(lang, 'footer_contact')}</a>
+          <span aria-hidden="true">·</span>
+          <a href={href('/privacy')}>{t(lang, 'footer_privacy')}</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+{
+  "schema": 2,
+  "slug": "slither",
+  "title": {
+    "en": "Slither.io Clone",
+    "zh": "Slither.io 复刻"
+  },
+  "summary": {
+    "en": "A Phaser-built Slither.io-style snake arena, complete with server code and a written tutorial series.",
+    "zh": "贪吃蛇大作战的 Phaser 复刻，含服务端与教程文档。"
+  },
+  "description": {
+    "en": "Steer with the mouse and vacuum up glowing dots to grow. Bait rivals into ramming your body, then absorb what's left of them — the feast never really ends.",
+    "zh": "鼠标控制蛇的方向，吃光点变长；让别人撞上你的身体即可击杀并吞掉对方光点，越吃越长。"
+  },
+  "howto": {
+    "en": "Mouse to steer.",
+    "zh": "鼠标"
+  },
+  "tip": {
+    "en": "The author documented the whole build as a tutorial series — working through it teaches you Phaser plus netcode. It needs a Node server, so deployment costs more than a static game.",
+    "zh": "作者把实现过程写成了系列教程，跟着做一遍能掌握 Phaser + 联机同步。需 Node 服务端，部署成本高于静态游戏。"
+  },
+  "categories": [
+    "arena"
+  ],
+  "tags": [
+    "phaser",
+    "node-js",
+    "mouse"
+  ],
+  "entry": "",
+  "repo": "https://github.com/knagaitsev/slither.io-clone",
+  "play": "",
+  "license": "MIT",
+  "stars": 264,
+  "size": "~1-5MB",
+  "server": true,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": false,
+  "fetched_at": null,
+  "tech": [
+    "Phaser",
+    "Node.js"
+  ],
+  "_branch": null
+}

@@ -1,0 +1,9 @@
+# 本地配置（自定义域名映射，不上传）
+config.local.js
+
+# 系统文件
+.DS_Store
+*.log
+__pycache__/
+*.pyc
+.venv/

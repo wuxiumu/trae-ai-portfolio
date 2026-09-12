@@ -1,0 +1,48 @@
+{
+  "schema": 2,
+  "slug": "supersudoku",
+  "title": {
+    "en": "Super Sudoku",
+    "zh": "Super Sudoku"
+  },
+  "summary": {
+    "en": "A beautifully made open-source Sudoku with difficulty tiers, pencil marks, a timer and mistake checking.",
+    "zh": "界面精良的开源数独，带难度分级、笔记、计时与自动校验。"
+  },
+  "description": {
+    "en": "Fill the 9×9 grid so every row, column and 3×3 box holds the digits 1-9 exactly once. Candidate notes, error hints, undo and restart all come standard.",
+    "zh": "9×9 棋盘填数，每行每列每宫 1-9 不重复。支持候选数笔记、错误提示、撤销与重开。"
+  },
+  "howto": {
+    "en": "Mouse or keyboard.",
+    "zh": "鼠标 / 键盘"
+  },
+  "tip": {
+    "en": "Sudoku has some of the best retention in the puzzle genre — a natural home for a 'daily puzzle' column. The React components are cleanly organized, so wiring in your own accounts and leaderboards is painless.",
+    "zh": "数独是留存率最高的一类益智游戏，适合做「每日一题」栏目。React 组件化结构清晰，接自己的用户系统、排行榜比较方便。"
+  },
+  "categories": [
+    "puzzle"
+  ],
+  "tags": [
+    "react",
+    "typescript",
+    "mouse"
+  ],
+  "entry": "/vendor/supersudoku/index.html",
+  "repo": "https://github.com/TN1ck/super-sudoku",
+  "play": "",
+  "license": "MIT",
+  "stars": 153,
+  "size": "~1-5MB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": true,
+  "fetched_at": "2026-08-30T18:19:36.058Z",
+  "tech": [
+    "React",
+    "TypeScript"
+  ],
+  "_branch": null
+}

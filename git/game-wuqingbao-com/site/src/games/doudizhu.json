@@ -1,0 +1,48 @@
+{
+  "schema": 2,
+  "slug": "doudizhu",
+  "title": {
+    "en": "Dou Dizhu (Fight the Landlord)",
+    "zh": "HTML5 斗地主"
+  },
+  "summary": {
+    "en": "A browser-only Dou Dizhu (Fight the Landlord) with dealing, bidding, play hints and simple AI opponents.",
+    "zh": "纯前端斗地主，含发牌、叫地主、出牌提示与简单 AI 出牌逻辑。"
+  },
+  "description": {
+    "en": "Seventeen cards in hand plus three bottom cards: bid to become the landlord, then shed your hand first to win the round. Singles, pairs, runs, bombs and other standard combos are all supported.",
+    "zh": "17 张手牌 + 3 张底牌，抢地主后先出完手牌者胜；支持单张、对子、顺子、炸弹等常规牌型。"
+  },
+  "howto": {
+    "en": "Mouse — click to select cards and play.",
+    "zh": "鼠标 / 点击"
+  },
+  "tip": {
+    "en": "Card games are the steadiest traffic category for Chinese audiences, and the front-end logic is complete — attach a room backend and it goes multiplayer. Keep it strictly entertainment; nothing involving real money.",
+    "zh": "国内流量最稳的棋牌品类，前端逻辑完整，接后端房间即可做联机版。注意合规：仅作娱乐、不涉真钱。"
+  },
+  "categories": [
+    "board"
+  ],
+  "tags": [
+    "原生js",
+    "canvas",
+    "mouse"
+  ],
+  "entry": "",
+  "repo": "https://github.com/svzdev/doudizhu",
+  "play": "",
+  "license": "MIT",
+  "stars": 520,
+  "size": "~1-5MB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": false,
+  "fetched_at": null,
+  "tech": [
+    "原生JS",
+    "Canvas"
+  ],
+  "_branch": null
+}

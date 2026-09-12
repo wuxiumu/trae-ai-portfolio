@@ -1,0 +1,48 @@
+{
+  "schema": 2,
+  "slug": "asteroids",
+  "title": {
+    "en": "HTML5 Asteroids",
+    "zh": "小行星"
+  },
+  "summary": {
+    "en": "A pure-JavaScript remake of the Atari classic, with vector-line graphics and real inertia physics.",
+    "zh": "纯 JS 复刻雅达利经典《Asteroids》，矢量线条画风，含惯性物理。"
+  },
+  "description": {
+    "en": "Thrust, rotate and fire to shatter asteroids into smaller and smaller fragments. Momentum carries you the whole time — one careless drift ends the run.",
+    "zh": "推进、转向、射击击碎小行星，大石分裂成小石；撞上碎片或飞出屏幕边界循环回来时被撞即结束。"
+  },
+  "howto": {
+    "en": "Arrow keys to rotate and thrust, space to shoot.",
+    "zh": "←→↑ / 空格"
+  },
+  "tip": {
+    "en": "The inertia-heavy shooting feel is genuinely good and outlasts your average shooter. The repo has no ready-made demo — just clone and deploy statically, a one-minute job.",
+    "zh": "射击手感（惯性漂移）做得好，比一般打飞机耐玩。仓库没有现成在线 demo，需要自己 clone 后静态部署，一分钟的事。"
+  },
+  "categories": [
+    "arcade"
+  ],
+  "tags": [
+    "原生js",
+    "canvas",
+    "touch"
+  ],
+  "entry": "/vendor/asteroids/index.html",
+  "repo": "https://github.com/dmcinnes/HTML5-Asteroids",
+  "play": "",
+  "license": "MIT",
+  "stars": 355,
+  "size": "~10-200KB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": true,
+  "fetched_at": "2026-08-30T17:47:43.220Z",
+  "tech": [
+    "原生JS",
+    "Canvas"
+  ],
+  "_branch": null
+}

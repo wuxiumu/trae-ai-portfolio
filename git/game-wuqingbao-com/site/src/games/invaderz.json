@@ -1,0 +1,51 @@
+{
+  "schema": 2,
+  "slug": "invaderz",
+  "title": {
+    "en": "Invaderz",
+    "zh": "进化侵略者"
+  },
+  "summary": {
+    "en": "Space Invaders that breed: every wave descends from the last, and each generation gets smarter.",
+    "zh": "会进化的太空侵略者：每一波敌人都是上一波「繁衍」出来的，越打越聪明。"
+  },
+  "description": {
+    "en": "Familiar shooter controls. Wipe out a whole wave and the next one spawns, its movement and firing quirks crossed and mutated by a genetic algorithm — so the difficulty climbs on its own.",
+    "zh": "经典射击操作，消灭整波敌人后进入下一代，敌人的移动/射击特征由遗传算法交叉变异产生，因此难度自动升级。"
+  },
+  "howto": {
+    "en": "Left/right arrows to move, space to fire.",
+    "zh": "方向键移动，空格射击。"
+  },
+  "tip": {
+    "en": "A strong differentiator — 'an evolutionary boss you can never truly finish' beats yet another shooter for talking points. Pure front-end, tiny footprint, and mobile-friendly out of the box.",
+    "zh": "差异化卖点强（「永远打不完的进化 Boss」），比普通打飞机更有话题。纯前端小体积，移动端适配良好。"
+  },
+  "categories": [
+    "arcade",
+    "puzzle"
+  ],
+  "tags": [
+    "原生js",
+    "canvas",
+    "遗传算法",
+    "touch"
+  ],
+  "entry": "/vendor/invaderz/index.html",
+  "repo": "https://github.com/victorqribeiro/invaderz",
+  "play": "https://victorqribeiro.github.io/invaderz/",
+  "license": "MIT",
+  "stars": 711,
+  "size": "~10-200KB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": true,
+  "fetched_at": "2026-08-30T12:51:30.181Z",
+  "tech": [
+    "原生JS",
+    "Canvas",
+    "遗传算法"
+  ],
+  "_branch": "master"
+}

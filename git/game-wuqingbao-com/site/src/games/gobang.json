@@ -1,0 +1,48 @@
+{
+  "schema": 2,
+  "slug": "gobang",
+  "title": {
+    "en": "Gobang (Gomoku AI)",
+    "zh": "五子棋 AI"
+  },
+  "summary": {
+    "en": "Browser Gomoku backed by an alpha-beta pruning AI, with several difficulty levels to pick from.",
+    "zh": "网页五子棋 + Alpha-Beta 剪枝 AI，中文教程齐全。"
+  },
+  "description": {
+    "en": "Click the board to place stones, black and white alternating; first to five in a row in any direction wins. Multiple AI strength tiers are built in.",
+    "zh": "鼠标落子，黑白轮流，横竖斜任意方向先连成五子获胜；内置多档 AI 难度可选。"
+  },
+  "howto": {
+    "en": "Mouse — click a cross point to place your stone.",
+    "zh": "鼠标 / 点击"
+  },
+  "tip": {
+    "en": "One of the best-known web Gomoku projects in the Chinese community, with explainable AI moves and tunable difficulty. Add forbidden-move rules and it levels up into a standard competitive edition.",
+    "zh": "中文社区最知名的网页五子棋之一，AI 走法可解释、可调难度。加个「先手禁手」规则就能升级成标准竞技版。"
+  },
+  "categories": [
+    "board"
+  ],
+  "tags": [
+    "原生js",
+    "canvas",
+    "mouse"
+  ],
+  "entry": "/vendor/gobang/index.html",
+  "repo": "https://github.com/lihongxun945/gobang",
+  "play": "",
+  "license": "MIT",
+  "stars": 1803,
+  "size": "~200KB-1MB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": true,
+  "fetched_at": "2026-08-30T18:19:36.289Z",
+  "tech": [
+    "原生JS",
+    "Canvas"
+  ],
+  "_branch": null
+}

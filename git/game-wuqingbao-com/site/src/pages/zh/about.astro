@@ -1,0 +1,71 @@
+---
+import Base from '../../layouts/Base.astro';
+import { games } from '../../data/loader.js';
+import { t } from '../../i18n/index.js';
+import { langHref } from '../../lib/nav.js';
+
+const lang = 'zh';
+const href = (p) => langHref(lang, p);
+const playable = games.filter((g) => g.fetched && g.entry).length;
+const total = games.length;
+---
+<Base lang={lang} title="关于我们" description="H5 游戏馆是什么、为什么做、谁在维护，以及每一款游戏如何从开源项目遴选、自托管到本站。" currentPath="/zh/about">
+  <div class="wrap info-page">
+    <h1>关于 H5 游戏馆</h1>
+    <p class="lead">一个独立运营的双语（中 / 英）开源 H5 小游戏集合，共收录 {total}+ 款基于浏览器的免费游戏。点开即玩，无需安装、无需登录。</p>
+
+    <section>
+      <h2>我们在做什么</h2>
+      <p>十年前的网页，有一整代「打开网页就能玩」的 Flash 小游戏；如今这些站点被广告、弹窗、登录墙和无效链接占满。而与此同时，GitHub 上数千位作者把他们做好的、完全可玩的 HTML5 小游戏以 MIT、GPL、Apache 等宽松协议开源出来，却只是静静躺在仓库里，从来没有被系统地收编、整理、翻译、用更友好的方式呈现给普通用户。</p>
+      <p>所以有了 H5 游戏馆。我们把真正能玩的项目从 GitHub 克隆到本地，自托管到同一个站点下，在每个游戏外面只包裹一层极简 iframe，绝不插入任何启动广告、遮挡弹窗或下载提示。然后我们给每一款游戏补中英双语的元数据：它是什么、谁做的、什么协议、怎么操作、好玩在哪里 —— 这样一个访客无论只会中文还是只会英文，都能真正「找到游戏并玩起来」，而不是在一堆 SEO 聚合页里兜圈子。</p>
+      <div class="card">
+        <h3>一句话了解本站</h3>
+        <p>📚 共收录 <strong>{total}</strong> 款游戏，其中 <strong>{playable}</strong> 款已自托管、可直接点开即玩；其余展示源码仓库与项目背景。</p>
+        <p>🌐 全站<strong>中英文双语</strong>对照：简介、分类、操作说明、SEO 元数据、结构化数据与 llms.txt 机器可读摘要，搜索引擎与 AI 引用引擎都会按语言返回正确页面。</p>
+        <p>🔬 每款游戏<strong>实名开源</strong>：页面列出作者、上游仓库链接、开源协议（MIT/GPL/Apache/BSD 等），我们认为归属标注是聚合站点最基本的底线。</p>
+        <p>🚫 <strong>无账号、无安装、无付费墙</strong>。凡是页面上标了「▶ 可玩」的，两步之内一定能进到真实游戏界面。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>游戏怎么选，怎么接进来</h2>
+      <p>我们不做随机抓一堆仓库然后往标题里堆关键字的「SEO 垃圾站」；筛选与集成都有明确的标准，写下来让你能信任内容质量：</p>
+      <ul>
+        <li><strong>必须是纯浏览器可运行</strong>：HTML、CSS、JavaScript 或 WebGL，不需要任何插件、下载、客户端。</li>
+        <li><strong>必须能从头到尾真的玩</strong>。半成品 Demo、只有一张菜单界面的周末项目，不会进可玩列表。每款标注「可玩」的游戏我们都在本地打开过、跑过基本流程。</li>
+        <li><strong>必须是 GitHub 上公开的开源项目</strong>，并带有被认可的开源协议（MIT、Apache-2.0、GPL-3.0、BSD、ISC、CC0 等）。页面都会把协议写清楚，方便二次利用。</li>
+        <li>优先收录<strong>真正作者的一手仓库</strong>——有提交历史、有维护痕迹，而不是匿名 fork 改三行 CSS 再发出来的镜像站。所有引用一律指向上游官方仓库，绝不链到自己的镜像替代作者。</li>
+      </ul>
+      <p>技术上，每款游戏源码克隆到本仓库的 <code>vendors/</code> 目录（这样你访问的版本是固定的，不会因为作者哪天删除了 GitHub Pages 而全站挂掉）。Vite、Webpack、CRA 等工程会以相对路径重新构建，确保放进 <code>/vendor/&lt;slug&gt;/</code> 的 iframe 里资源能正确加载；体积较大的项目（如 <a href={href('/games/sandboxels/')}>沙盒元素</a>、<a href={href('/games/hexgl/')}>太空赛车 HexGL</a>）会在部署前裁剪未被引用的字体和模组，保证访问速度。</p>
+    </section>
+
+    <section>
+      <h2>谁在维护这个站点</h2>
+      <p>H5 游戏馆是一个由几位怀旧向的技术爱好者共同维护的<strong>业余项目</strong>——当年在 4399、7k7k、Miniclip、Newgrounds 泡过、现在仍然怀念那种「打开网页就有几十个小游戏可以玩」的感觉。</p>
+      <p>我们的所有工作都在公开仓库 <a href="https://github.com/wuxiumu/game-wuqingbao-com" rel="noopener">github.com/wuxiumu/game-wuqingbao-com</a> 进行，包括整个站点源码、上游抓取与构建脚本、批次清单、每一款游戏的双语元数据文件，全部以 MIT 协议开源——你完全可以 Fork 一份自己搭一个主题更偏、语言更多的游戏站，或者提交 PR 新增你喜欢的游戏。</p>
+      <p>我们不接受任何游戏作者、厂商、广告主的付费推广；页面上的所有链接没有一分钱返佣；是否收录一款游戏只取决于「我们真的喜欢玩它」。</p>
+    </section>
+
+    <section>
+      <h2>我们维护站点的几条原则</h2>
+      <ul>
+        <li><strong>可信度优先于流量</strong>。老实说明某款游戏需要后端、诚实标出某款游戏仍然在开发中，比把「敬请期待」四个字藏起来换点击量更重要。</li>
+        <li><strong>访问者的数据与设备属于他们自己</strong>。我们不注册账号，不强制装 App，不塞追踪脚本；统计功能只有显式配置了 Umami 才会启用，且默认匿名。</li>
+        <li><strong>把 99% 的功劳还给原作者</strong>。我们做的事情（双语介绍、打包自托管、截图、分类）是那最后 1% 的整理工作——所以每个页面都会把上游作者、仓库、协议放得很显眼。</li>
+        <li><strong>慢一点，稳一点</strong>。我们宁可每月花时间认真接入 5 款游戏，也不要一次塞 50 款进来让目录里一半是死链接；上游挂掉的仓库会被清理标记，构建脚本出问题会优先修，不会让站点看起来像「一次性搭建然后半年没人管」。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>路线图：接下来要做什么</h2>
+      <p>现在是 {total} 款游戏、{playable} 款可玩的阶段。我们正在推进：</p>
+      <ul>
+        <li>继续拓展目录，目标 60+ 款；达到后在现有搜索之上补充分页、按标签筛选的功能。</li>
+        <li>为多项目仓库「Retro Games」做一个合集入口页，让它下面 4 款复古小游戏都能直接被访问。</li>
+        <li>尝试容器化部署 3 款需要服务端的游戏（类 Agar 的 <a href={href('/games/agar/')}>Agar</a>、Slither 版多人贪吃蛇、斗地主 <a href={href('/games/doudizhu/')}>Dou Dizhu</a>），让它们从「敬请期待」变成可玩。</li>
+        <li>为目前菜单黑屏 / 空白的少数游戏换一张更好的首屏封面图——封面已经接入了 OpenGraph 和 Twitter 大卡片，只差逐款微调。</li>
+      </ul>
+      <p>如果你对这些工作感兴趣，或者想推荐一款你觉得应该被收录的游戏，请从 <a href={href('/contact')}>联系我们</a> 页找到邮箱，或者直接去上面的 GitHub 仓库提 Issue / PR 都完全欢迎。</p>
+    </section>
+  </div>
+</Base>

@@ -1,0 +1,48 @@
+{
+  "schema": 2,
+  "slug": "spaceinvaders",
+  "title": {
+    "en": "Space Invaders",
+    "zh": "太空侵略者"
+  },
+  "summary": {
+    "en": "A pixel-art Space Invaders remake with level progression and sound, written in deliberately teachable code.",
+    "zh": "像素风太空侵略者复刻，带关卡推进与音效，代码风格教学向。"
+  },
+  "description": {
+    "en": "Slide your cannon along the bottom and pick off the descending alien fleet while dodging return fire. Clear the screen and the next wave comes faster and thicker.",
+    "zh": "左右移动炮台射击下压的外星舰队，躲避子弹；清空一屏进入下一关，敌人速度与数量递增。"
+  },
+  "howto": {
+    "en": "Arrow keys and space.",
+    "zh": "方向键与空格。"
+  },
+  "tip": {
+    "en": "The commit history reads like book chapters — one lesson per commit — which makes it a ready-made 'build your own game' textbook. A natural fit for a retro-arcade section.",
+    "zh": "章節式 commit 历史（每步一个 commit），想教人做游戏可以直接拿它当教材。适合做站点的「复古街机」栏目。"
+  },
+  "categories": [
+    "arcade"
+  ],
+  "tags": [
+    "原生js",
+    "canvas",
+    "touch"
+  ],
+  "entry": "/vendor/spaceinvaders/index.html",
+  "repo": "https://github.com/dwmkerr/spaceinvaders",
+  "play": "https://dwmkerr.github.io/spaceinvaders/",
+  "license": "MIT",
+  "stars": 213,
+  "size": "~200KB-1MB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": true,
+  "fetched_at": "2026-08-30T12:51:32.280Z",
+  "tech": [
+    "原生JS",
+    "Canvas"
+  ],
+  "_branch": "master"
+}

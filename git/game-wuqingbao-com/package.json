@@ -1,0 +1,23 @@
+{
+  "name": "game-wuqingbao-com",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "中英双语开源 H5 小游戏站",
+  "scripts": {
+    "dev": "cd site && npm run dev",
+    "build": "cd site && npm run build",
+    "preview": "cd site && npm run preview",
+    "install:all": "cd site && npm install",
+    "clone": "bash scripts/clone-all.sh",
+    "clone:all": "bash scripts/clone-all.sh --all",
+    "clone:dry": "bash scripts/clone-all.sh --dry-run",
+    "clone:update": "bash scripts/clone-all.sh --update",
+    "fetch": "node scripts/fetch-games.mjs",
+    "fetch:dry": "node scripts/fetch-games.mjs --dry-run",
+    "batch": "bash scripts/run-batch.sh",
+    "status": "bash scripts/run-batch.sh status",
+    "clean": "rm -rf site/dist site/.astro logs",
+    "list": "cat games-list.md"
+  }
+}

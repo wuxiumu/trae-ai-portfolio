@@ -1,0 +1,48 @@
+{
+  "schema": 2,
+  "slug": "onslaught",
+  "title": {
+    "en": "Onslaught Arena",
+    "zh": "Onslaught Arena"
+  },
+  "summary": {
+    "en": "A fast top-down monster brawl — endless medieval waves charge in, and positioning is everything.",
+    "zh": "俯视角快节奏怪物割草，一波波中世纪怪物冲上来，走位最关键。"
+  },
+  "description": {
+    "en": "Move with WASD and your cannon auto-fires at whatever the mouse points at. Clear a wave, face the next, grab pickups to power up, and stay alive as long as you can for a bigger score.",
+    "zh": "WASD 移动、鼠标瞄准自动射击，清完一波刷下一波，靠拾取道具强化，撑得越久分越高。"
+  },
+  "howto": {
+    "en": "WASD to move, mouse to aim.",
+    "zh": "WASD / 鼠标"
+  },
+  "tip": {
+    "en": "High-adrenaline runs of three to five minutes — a perfect 'five-minute break' entry point. The assets are mostly sprite atlases, so the first load is a touch heavy; serve them from a CDN.",
+    "zh": "爽感强、单局时间短（3-5 分钟），适合做「摸鱼五分钟」入口。资源以图集为主，首次加载略大，建议上 CDN。"
+  },
+  "categories": [
+    "arcade"
+  ],
+  "tags": [
+    "原生js",
+    "canvas",
+    "mouse"
+  ],
+  "entry": "/vendor/onslaught/index.html",
+  "repo": "https://github.com/lostdecade/onslaught_arena",
+  "play": "",
+  "license": "MIT",
+  "stars": 203,
+  "size": "~1-5MB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": true,
+  "fetched_at": "2026-08-30T17:47:44.047Z",
+  "tech": [
+    "原生JS",
+    "Canvas"
+  ],
+  "_branch": null
+}

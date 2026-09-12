@@ -1,0 +1,87 @@
+---
+import Base from '../../layouts/Base.astro';
+import { t } from '../../i18n/index.js';
+import { langHref } from '../../lib/nav.js';
+
+const lang = 'zh';
+const href = (p) => langHref(lang, p);
+---
+<Base lang={lang} title="联系我们" description="联系 H5 游戏馆运营团队：报故障、推荐新游戏、举报侵权、或提出合作与建议。" currentPath="/zh/contact">
+  <div class="wrap info-page">
+    <h1>联系 H5 游戏馆</h1>
+    <p class="lead">每一封信我们都会读。按你要讲的事情选最对口的渠道，一般 1-2 周内能收到回复。</p>
+
+    <section>
+      <h2>📮 直接给我们发邮件</h2>
+      <p>联系运营团队最快的方式是邮件。不管是站点问题、某款游戏页面出错、下架请求、商务合作，都走这个邮箱。我们不会用「自动回复然后石沉大海」那一套。</p>
+      <div class="card">
+        <h3>电子邮箱</h3>
+        <p><a href="mailto:hello@game.wuqingbao.com"><strong>hello@game.wuqingbao.com</strong></a></p>
+        <p style="font-size: 14px; color: var(--muted); margin-top: 6px;">如果你更喜欢在线表单，也可以把同样的内容贴在邮件正文里发过来——我们两种方式同样对待。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🐛 报错：游戏打不开、玩不了、链接断了</h2>
+      <p>这是目前我们收到最多的一类邮件，也是对我们最有帮助的一类。本站自托管了 35+ 款游戏，上游仓库更新、构建脚本边界情况、浏览器 API 废弃……都可能让原本能玩的游戏突然挂掉。遇到下面任意一种情况，只要把「出问题的页面 URL + 一两句话描述」发出来，我们就会排查并修复：</p>
+      <ul>
+        <li>游戏 iframe 区域是空白页，或浏览器返回 404。</li>
+        <li>画布加载出来但卡在「加载中」「黑屏」，点击没有任何反应。</li>
+        <li>页面写的操作说明，和游戏实际接受的按键不一致。</li>
+        <li>「新窗口打开」按钮跳到的不是游戏本身。</li>
+        <li>「查看源码」链接失效，上游仓库被删除或改地址了。</li>
+      </ul>
+      <p>如果你愿意附一张截图，或者更棒的——按 F12 打开开发者工具，把 Console 和 Network 里红色报错的截图发过来，能让我们定位 WebGL / JavaScript 运行时错误的速度快十倍。</p>
+    </section>
+
+    <section>
+      <h2>✨ 推荐新游戏给我们收录</h2>
+      <p>我们非常乐意收到推荐。但先把收錄规则贴在这里，这样你发过来的不会被我们一句「没法接入」给直接驳回：</p>
+      <div class="card">
+        <h3>什么类型的游戏我们会收录</h3>
+        <ul style="margin-bottom: 0;">
+          <li>公开的 GitHub 仓库，README 完整，有明确的开源协议（MIT/Apache/GPL/BSD/CC0 都行）。</li>
+          <li>可以在普通浏览器标签页里从头到尾玩起来（HTML/CSS/JS 或 WebGL），不需要下载客户端、不需要 Unity/Flash/Java 插件。</li>
+          <li>可以纯前端离线运行，或者自带单机 / 本地模式（纯后端依赖类的游戏我们暂缓收录，但会记下来排队做容器化部署）。</li>
+          <li>一条优质推荐远胜过二十条粗泛的清单。哪怕只推荐一款游戏，只要附上仓库链接和「为什么你喜欢它」的一句话，我们会认真玩并评估。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>© 版权申诉与下架请求</h2>
+      <p>本站所有游戏均来自原作者的开源仓库，并严格按各仓库附带的开源协议自托管。即便如此，如果你是某位游戏的作者、权利持有人或其授权代理，认为本站某一页面或某份运行时副本违反了你的授权协议或你的合法权利，请通过 <a href="mailto:hello@game.wuqingbao.com">hello@game.wuqingbao.com</a> 与我们联系，并附上以下信息，我们将在一个工作日内处理并回复：</p>
+      <ul>
+        <li>你的姓名、联系方式、与作品的关系（原作者 / 委托律师 / DMCA 代理等）。</li>
+        <li>你认为存在问题的页面在本站的<strong>精确 URL</strong>。</li>
+        <li>该作品最初公开发布的上游仓库或页面，以及你认为我们侵犯了协议或权利的<strong>具体条款</strong>。</li>
+        <li>你希望的处理方式：(a) 完整删除本站的运行时副本并保留仅指向上游的链接；还是 (b) 我们修正署名、元数据、封面截图等局部信息。</li>
+      </ul>
+      <p>我们绝不会违背权利持有人的意愿去保留作品。世界上有几千款优秀的开源游戏值得收录——如果其中一款是你做的，但你不希望它出现在这里，告诉我们就够了。</p>
+    </section>
+
+    <section>
+      <h2>💬 公开协作渠道（GitHub）</h2>
+      <p>更愿意在公开场合讨论？没问题。整个站点在 GitHub 上公开开发，绝大多数计划讨论都在 Issues 里进行：</p>
+      <dl>
+        <dt>代码仓库</dt>
+        <dd><a href="https://github.com/wuxiumu/game-wuqingbao-com" rel="noopener">github.com/wuxiumu/game-wuqingbao-com</a></dd>
+        <dt>提交新游戏推荐 / 故障</dt>
+        <dd>新建 Issue 并打上对应的标签，维护者当天会分类处理。</dd>
+        <dt>想直接提交代码？</dt>
+        <dd>挑任一标记为「Good first issue」的问题，在下面留言即可——我们会在十分钟之内帮你把本地开发环境搭起来。</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>⏱️ 回复时效说明</h2>
+      <p>这是一个业余维护项目，而不是 7×24 小时 SLA 的公司客服。实际响应时间大致如下：</p>
+      <ul>
+        <li>下架、DMCA 类投诉：<strong>1 个工作日内</strong>。</li>
+        <li>可复现的游戏故障：<strong>3-5 个工作日内</strong>。</li>
+        <li>新游戏推荐：我们会记在待处理列表里，等我们真的把那款游戏玩过之后再回复，一般<strong>1-2 周</strong>。</li>
+        <li>如果超过两周没有任何回信，请再发一次邮件——少数情况下反垃圾邮件过滤器确实会误吞真人来信。</li>
+      </ul>
+    </section>
+  </div>
+</Base>

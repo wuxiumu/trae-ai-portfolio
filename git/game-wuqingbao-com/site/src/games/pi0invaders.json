@@ -1,0 +1,46 @@
+{
+  "schema": 2,
+  "slug": "pi0invaders",
+  "title": {
+    "en": "4KB Space Invaders",
+    "zh": "4KB 太空侵略者"
+  },
+  "summary": {
+    "en": "A single-file Space Invaders at roughly 4KB gzipped — minimalism taken to its logical extreme.",
+    "zh": "gzip 后仅约 4KB 的单文件太空侵略者，极致压缩的极限挑战作品。"
+  },
+  "description": {
+    "en": "Plays just like the arcade original, with every line of logic, rendering and sound crammed into one minified JS file.",
+    "zh": "玩法同经典太空侵略者，全部逻辑、图形绘制、音效都在一个压缩后的 JS 文件里完成。"
+  },
+  "howto": {
+    "en": "Left/right arrows to move, space to shoot.",
+    "zh": "←→ / 空格"
+  },
+  "tip": {
+    "en": "Slap a one-line badge on the page — 'this game is just 4KB gzipped'. Instant loading is a real, tangible edge on weak connections and in price-sensitive markets.",
+    "zh": "可在页面加一行「本游戏 gzip 后仅 4KB」的标签，秒开体验在弱网/下沉市场是实打实的优势。"
+  },
+  "categories": [
+    "retro"
+  ],
+  "tags": [
+    "单文件js",
+    "touch"
+  ],
+  "entry": "/vendor/pi0invaders/index.html",
+  "repo": "https://github.com/pi0/space-invaders",
+  "play": "https://pi0.github.io/space-invaders/",
+  "license": "MIT",
+  "stars": 57,
+  "size": "~10-200KB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": true,
+  "fetched_at": "2026-08-30T17:47:43.138Z",
+  "tech": [
+    "单文件JS"
+  ],
+  "_branch": null
+}

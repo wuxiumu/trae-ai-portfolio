@@ -1,0 +1,6 @@
+---
+import GamesList from '../../../components/GamesList.astro';
+import { games } from '../../../data/loader.js';
+import { t } from '../../../i18n/index.js';
+---
+<GamesList lang="zh" games={games} heading={t('zh', 'games_list_title')} subheading={`${games.length} 款游戏`} />

@@ -1,0 +1,70 @@
+---
+import Base from '../layouts/Base.astro';
+import { games } from '../data/loader.js';
+import { t } from '../i18n/index.js';
+import { langHref } from '../lib/nav.js';
+
+const lang = 'en';
+const href = (p) => langHref(lang, p);
+const playable = games.filter((g) => g.fetched && g.entry).length;
+const total = games.length;
+---
+<Base lang={lang} title="About" description="What H5 Arcade is, why it exists, who runs it, and how every game on this site is curated from open-source repositories." currentPath="/about">
+  <div class="wrap info-page">
+    <h1>About H5 Arcade</h1>
+    <p class="lead">An independent, bilingual (English / 简体中文) arcade of 35+ free, open-source HTML5 mini-games — all playable in the browser, with nothing to install.</p>
+
+    <section>
+      <h2>What this site is</h2>
+      <p>H5 Arcade is a thoughtfully curated collection of real HTML5 games, built out of a simple observation: most online "arcade sites" are packed with ads, trackers, login walls, and games that no longer run after Flash died. A decade of creative people released perfectly good, polished, fully-playable web games on GitHub under permissive licenses — then they sat there, starred by thousands, but never put together in a single place that's <em>quiet, fast, and respectful</em> of players.</p>
+      <p>So that's what this site is. Every game you play here is the original author's code, pulled straight from its official GitHub repository, self-hosted for stability, and shown inside a plain iframe with nothing around it. We don't modify the gameplay. We don't wrap it in interstitial ads. We just give each project a bilingual page that explains what it is, who made it, what license it uses, and what the controls are — so someone who lands here can actually find a game and play it.</p>
+      <div class="card">
+        <h3>At a glance</h3>
+        <p>📚 <strong>{total} games</strong> catalogued, <strong>{playable} instantly playable</strong> via iframe, the rest linked to their source repository.</p>
+        <p>🌐 <strong>Bilingual</strong> — every summary, category, control hint and metadata exists in English and 简体中文, with dedicated hreflang alternates so search engines and AI answer engines can pick the right language.</p>
+        <p>🔬 <strong>Open-source and cited</strong> — every game page names its author, links back to the upstream repository, and clearly states the license (MIT, GPL, Apache, BSD…). We believe attribution is the least a curation site can do.</p>
+        <p>🚫 <strong>No accounts, no install, no paywalls.</strong> If a game page says "Playable", it's playable in two clicks.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>How games are selected and integrated</h2>
+      <p>Curatorship here follows a few explicit rules, which we write down so you can trust this isn't a random dump of repositories with SEO stuffed on top:</p>
+      <ul>
+        <li>The game must be <strong>purely browser-based</strong> — HTML, CSS, JavaScript or WebGL. No plugins, no downloads, no native clients required.</li>
+        <li>It must be <strong>genuinely playable end-to-end</strong>. We don't include half-finished demos or weekend experiments whose controls don't actually do anything. If it's in the playable list, we've loaded it and run it locally.</li>
+        <li>The source must be <strong>public on GitHub</strong> under a recognized open-source license (MIT, Apache-2.0, GPL-3.0, BSD, ISC, CC0, and so on). Each page lists that license so you know exactly what you can do with the code.</li>
+        <li>We favor <strong>projects with a real author</strong> behind them — established repositories with history, not anonymous forks with three lines of CSS changed. And we always link to the upstream, not a mirror.</li>
+      </ul>
+      <p>For the technical integration: every game is cloned into this repository's <code>vendors/</code> directory (so we know exactly what version you're playing, and we don't hotlink to potentially-deleted GitHub Pages). Vite, Webpack and CRA projects are rebuilt with relative asset paths so they run correctly inside the <code>/vendor/&lt;slug&gt;/</code> iframe. Large projects like <a href={href('/games/sandboxels/')}>Sandboxels</a> and <a href={href('/games/hexgl/')}>HexGL</a> have their unused fonts and mods trimmed before deploy to keep the site fast.</p>
+    </section>
+
+    <section>
+      <h2>Who runs this</h2>
+      <p>H5 Arcade is a hobby project maintained by a small group of people who grew up with Flash arcades and miss that kind of web. We build it in public: the entire site source, the vendor clone scripts, the integration planner, and every game's bilingual metadata file are open source at <a href="https://github.com/wuxiumu/game-wuqingbao-com" rel="noopener">github.com/wuxiumu/game-wuqingbao-com</a> under the MIT license. Feel free to fork it and host your own arcade, or send a pull request with a new game.</p>
+      <p>We aren't sponsored by any of the game authors. None of the links on this site are affiliate links. No one pays us to list a game. If a project appears here, it's because one of us actually liked playing it.</p>
+    </section>
+
+    <section>
+      <h2>Principles we try to live by</h2>
+      <ul>
+        <li><strong>Trust over traffic.</strong> Attribution, honest descriptions, and working games beat "engaging" bait. If a game is half-finished or requires a server backend, we tell you that on the page instead of pretending otherwise.</li>
+        <li><strong>The player owns their device and their data.</strong> We don't ask for accounts. We don't put trackers on unless you explicitly opt in via Umami. We host, we don't chase.</li>
+        <li><strong>Credit upstream.</strong> Open-source authors did 99% of the work. The 1% we do on top — bilingual pages, integration, screenshots — is explicitly credited to them everywhere it matters.</li>
+        <li><strong>Site shape over time.</strong> We'd rather add five well-integrated games a month and keep the site healthy, than dump fifty and let the catalogue rot. Dead repos get retired, broken builds get fixed, and new great projects get added when we find them.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Roadmap and what's next</h2>
+      <p>Right now we're at <strong>{total} games</strong> in the catalogue and <strong>{playable}</strong> in-browser. The short list of things we're actively working on:</p>
+      <ul>
+        <li>Adding new games until the catalogue passes 60 — at which point we'll add proper pagination and tag filters on top of the existing search.</li>
+        <li>Building entry pages for multi-game repositories like <em>retrogames</em>, whose four sub-games aren't currently exposed as a single landing page.</li>
+        <li>Containerizing and self-hosting the three server-side games (agar.io-style <a href={href('/games/agar/')}>Agar</a>, the Slither clone, and the Chinese card game <em>Dou Dizhu</em>), which currently only show the source code.</li>
+        <li>Replacing the auto-generated cover screenshots with hand-tuned first-frames for the half-dozen games where the menu screen is black or empty. Covers are already hooked up to OpenGraph and Twitter cards — we just want them all to look good on first view.</li>
+      </ul>
+      <p>If any of that sounds fun, the <a href={href('/contact')}>Contact page</a> has our email and the GitHub link above is always open to issues and PRs.</p>
+    </section>
+  </div>
+</Base>

@@ -1,0 +1,23 @@
+# deps
+node_modules/
+
+# build output
+dist/
+.astro/
+
+# runtime clones (由 scripts/clone-all.sh 生成，不提交)
+vendors/
+
+# 游戏运行时文件 (由 fetch-games.mjs 拷入，不提交，本地跑脚本生成)
+site/public/vendor/
+
+# 运行时日志
+logs/
+
+# tarball 缓存
+*.tar.gz
+
+# editor / OS
+.DS_Store
+*.log
+.env

@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "slug": "ioexample",
+  "title": {
+    "en": "Example .io Game",
+    "zh": "io 游戏脚手架"
+  },
+  "summary": {
+    "en": "A minimal example .io game demonstrating server-authoritative logic, client interpolation and other multiplayer essentials.",
+    "zh": "多人 io 游戏的极简示范工程，含服务端权威判定、客户端插值等核心套路。"
+  },
+  "description": {
+    "en": "The sample itself is a small multiplayer arena: roam with WASD, shoot with the mouse, and score points by taking out other players.",
+    "zh": "示例本身是一个多人移动的射击小游戏：WASD 移动、鼠标射击，击杀其他玩家得分。"
+  },
+  "howto": {
+    "en": "WASD to move, mouse to aim and shoot.",
+    "zh": "鼠标 / WASD"
+  },
+  "tip": {
+    "en": "Not a finished game but a skeleton that shows how .io games are built. When your site outgrows single-player, starting from this beats reinventing the wheel.",
+    "zh": "不是成品游戏，是「怎么做 io 游戏」的骨架。如果你的站想从单机升级到联机，从它开始比从零造轮子快得多。"
+  },
+  "categories": [
+    "arena"
+  ],
+  "tags": [
+    "node-js",
+    "socket-io",
+    "canvas",
+    "mouse"
+  ],
+  "entry": "/vendor/ioexample/index.html",
+  "repo": "https://github.com/vzhou842/example-.io-game",
+  "play": "",
+  "license": "MIT",
+  "stars": 452,
+  "size": "~200KB-1MB",
+  "server": true,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": true,
+  "fetched_at": "2026-08-30T18:19:36.204Z",
+  "tech": [
+    "Node.js",
+    "Socket.IO",
+    "Canvas"
+  ],
+  "_branch": null
+}

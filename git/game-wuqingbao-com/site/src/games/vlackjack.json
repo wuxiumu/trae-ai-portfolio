@@ -1,0 +1,48 @@
+{
+  "schema": 2,
+  "slug": "vlackjack",
+  "title": {
+    "en": "Vlackjack (Blackjack)",
+    "zh": "21 点 Blackjack"
+  },
+  "summary": {
+    "en": "A modern Blackjack built with Vue 3 — clean interface and a complete betting flow.",
+    "zh": "Vue 3 写的现代版 21 点，界面干净，含完整赌注流程。"
+  },
+  "description": {
+    "en": "Hit or stand to work your hand as close to 21 as you dare without busting, then beat the dealer. Splitting, doubling down and other house rules are in.",
+    "zh": "要牌/停牌让手牌点数尽量接近 21 点但不爆牌，与庄家比大小；支持分牌、加倍等常见规则。"
+  },
+  "howto": {
+    "en": "Mouse — click to hit, stand, split or double.",
+    "zh": "鼠标 / 点击"
+  },
+  "tip": {
+    "en": "The easiest card game to monetize — virtual chips and daily quests slot right in. Vue 3 components make adding points and achievements almost effortless.",
+    "zh": "棋牌类里最容易接入变现（虚拟筹码、每日任务）的一款。Vue 3 组件化，加积分、成就系统很顺手。"
+  },
+  "categories": [
+    "board"
+  ],
+  "tags": [
+    "vue-3",
+    "vite",
+    "mouse"
+  ],
+  "entry": "/vendor/vlackjack/index.html",
+  "repo": "https://github.com/kevinleedrum/vlackjack",
+  "play": "https://kevinleedrum.github.io/vlackjack/",
+  "license": "MIT",
+  "stars": 184,
+  "size": "~200KB-1MB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": true,
+  "fetched_at": "2026-08-30T18:19:35.941Z",
+  "tech": [
+    "Vue 3",
+    "Vite"
+  ],
+  "_branch": null
+}

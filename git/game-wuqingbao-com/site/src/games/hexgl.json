@@ -1,0 +1,49 @@
+{
+  "schema": 2,
+  "slug": "hexgl",
+  "title": {
+    "en": "HexGL",
+    "zh": "HexGL"
+  },
+  "summary": {
+    "en": "A sci-fi anti-gravity racer that set the standard for what WebGL could do in its day.",
+    "zh": "科幻风反重力竞速，早年 WebGL 性能的标杆之作。"
+  },
+  "description": {
+    "en": "Pilot a hover craft down a glowing hexagonal track at ridiculous speed — steer with the arrows, boost with space. Scraping the walls costs momentum, and it's three timed laps to prove yourself.",
+    "zh": "在六边形赛道上高速竞速，方向键转向、空格加速，撞到边界会减速，三圈计时排名。"
+  },
+  "howto": {
+    "en": "Arrow keys to steer, space to boost.",
+    "zh": "方向键 / 空格"
+  },
+  "tip": {
+    "en": "The most visually striking entry in the collection — ideal front-page material: big hero image plus a play-now button. Assets are large (HD textures), so lazy-load them behind a progress bar.",
+    "zh": "视觉冲击最强的收录项，适合当站点门面（首屏大图 + 立即试玩）。资源较大（高清贴图），建议懒加载 + 预加载进度条。"
+  },
+  "categories": [
+    "adventure"
+  ],
+  "tags": [
+    "three-js",
+    "webgl",
+    "keyboard",
+    "touch"
+  ],
+  "entry": "/vendor/hexgl/index.html",
+  "repo": "https://github.com/BKcore/HexGL",
+  "play": "http://hexgl.bkcore.com",
+  "license": "MIT",
+  "stars": 1737,
+  "size": "19.5MB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": true,
+  "fetched_at": "2026-08-30T18:23:52.473Z",
+  "tech": [
+    "Three.js",
+    "WebGL"
+  ],
+  "_branch": null
+}

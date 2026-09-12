@@ -1,0 +1,47 @@
+{
+  "schema": 2,
+  "slug": "retrogames",
+  "title": {
+    "en": "Retro Games Collection",
+    "zh": "复古游戏合集"
+  },
+  "summary": {
+    "en": "One repo, four arcade classics: Asteroids, Lunar Lander, Space Invaders and Snake.",
+    "zh": "一个仓库四个游戏：小行星、登月舱、太空侵略者、贪吃蛇。"
+  },
+  "description": {
+    "en": "Each game gets its own page and plays by arcade rules: fire retro-thrusters to set the lunar module down gently, while the rest use the controls you already know.",
+    "zh": "每个游戏一个独立页面，规则沿用经典街机：登月舱靠火箭反推软着陆，其余为常见街机操作。"
+  },
+  "howto": {
+    "en": "Keyboard.",
+    "zh": "键盘"
+  },
+  "tip": {
+    "en": "Four site entries for the price of one — outstanding value. The tutorial-style code shares one framework, so learning one game means you can rework all four.",
+    "zh": "一次性给站点补 4 个条目，性价比极高。代码是教学风格，统一框架，改一个等于改四个。"
+  },
+  "categories": [
+    "arcade"
+  ],
+  "tags": [
+    "原生js",
+    "canvas"
+  ],
+  "entry": "",
+  "repo": "https://github.com/maryrosecook/retro-games",
+  "play": "",
+  "license": "MIT",
+  "stars": 57,
+  "size": "~10-200KB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": false,
+  "fetched_at": null,
+  "tech": [
+    "原生JS",
+    "Canvas"
+  ],
+  "_branch": null
+}

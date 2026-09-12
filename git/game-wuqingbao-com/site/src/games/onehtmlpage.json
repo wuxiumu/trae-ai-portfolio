@@ -1,0 +1,47 @@
+{
+  "schema": 2,
+  "slug": "onehtmlpage",
+  "title": {
+    "en": "One HTML Page Challenge",
+    "zh": "单页挑战合集"
+  },
+  "summary": {
+    "en": "A challenge collection where every entry must live in a single HTML file — stuffed with quirky mini-games.",
+    "zh": "只能用「一个 HTML 文件」创作的挑战合集，里面塞满了各种脑洞小游戏。"
+  },
+  "description": {
+    "en": "A grab bag of experiments: each sub-project follows its own rules, spanning shooters, puzzles, simulators, music toys and more.",
+    "zh": "合集形式，每个子项目独立规则：有射击、解谜、模拟器、音乐玩具等，玩法各不相同。"
+  },
+  "howto": {
+    "en": "Depends on the sub-project.",
+    "zh": "视子项目而定"
+  },
+  "tip": {
+    "en": "A treasure chest for inspiration and obscure mini-games. Pick out the most polished ones and lift them straight into your site — free content, all single-file with zero dependencies.",
+    "zh": "找灵感/找冷门小游戏的宝库。挑几个完成度高的直接搬进站点，等于白捡一批内容，且全部单文件、零依赖。"
+  },
+  "categories": [
+    "retro"
+  ],
+  "tags": [
+    "原生js",
+    "html"
+  ],
+  "entry": "/vendor/onehtmlpage/index.html",
+  "repo": "https://github.com/Metroxe/one-html-page-challenge",
+  "play": "",
+  "license": "MIT",
+  "stars": 1382,
+  "size": "~10-200KB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": true,
+  "fetched_at": "2026-08-30T17:47:43.630Z",
+  "tech": [
+    "原生JS",
+    "HTML"
+  ],
+  "_branch": null
+}

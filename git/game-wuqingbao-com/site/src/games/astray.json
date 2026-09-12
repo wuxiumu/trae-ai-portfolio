@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "slug": "astray",
+  "title": {
+    "en": "Astray",
+    "zh": "Astray 迷宫"
+  },
+  "summary": {
+    "en": "A first-person WebGL maze crawler where claustrophobic lighting does the heavy lifting for atmosphere.",
+    "zh": "第一人称 WebGL 迷宫，光线幽闭、氛围感极强。"
+  },
+  "description": {
+    "en": "Grope your way through a pitch-dark maze guided by a faint light, find the portal and drop into the next, progressively harder floor.",
+    "zh": "在黑暗迷宫中摸索出口，靠微弱光源辨路，找到传送门进入下一层，层数递增。"
+  },
+  "howto": {
+    "en": "WASD to move, mouse to look around.",
+    "zh": "WASD / 鼠标"
+  },
+  "tip": {
+    "en": "An atmosphere piece — retention runs on pure curiosity. The Three.js plus Box2D stack takes some graphics know-how to overhaul, but swapping textures or maze-generation parameters yields a new variant quickly.",
+    "zh": "氛围类游戏，留存靠好奇心。Three.js + Box2D 组合，需要一点图形学基础才能大改，但换贴图/迷宫生成参数就能出新品。"
+  },
+  "categories": [
+    "adventure"
+  ],
+  "tags": [
+    "three-js",
+    "webgl",
+    "box2d",
+    "mouse"
+  ],
+  "entry": "/vendor/astray/index.html",
+  "repo": "https://github.com/wwwtyro/Astray",
+  "play": "https://wwwtyro.github.io/Astray/",
+  "license": "MIT",
+  "stars": 602,
+  "size": "~5-20MB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": true,
+  "fetched_at": "2026-08-30T17:47:43.314Z",
+  "tech": [
+    "Three.js",
+    "WebGL",
+    "Box2D"
+  ],
+  "_branch": null
+}

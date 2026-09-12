@@ -1,0 +1,48 @@
+{
+  "schema": 2,
+  "slug": "duckhunt",
+  "title": {
+    "en": "Duck Hunt JS",
+    "zh": "打鸭子"
+  },
+  "summary": {
+    "en": "A JavaScript port of the NES classic Duck Hunt, with mouse light-gun play and the original game flow.",
+    "zh": "红白机《打鸭子》的 JS 移植版，含光枪（鼠标）交互与原版流程。"
+  },
+  "description": {
+    "en": "Ducks burst from the grass — shoot them down with your mouse before they escape. Each round sets a quota, and miss too many and the dog laughs you off the stage.",
+    "zh": "鸭子从草丛飞出，在限定时间内用鼠标点击击落，每关有配额，漏掉太多即失败。"
+  },
+  "howto": {
+    "en": "Mouse — click to shoot.",
+    "zh": "鼠标 / 点击"
+  },
+  "tip": {
+    "en": "Mouse and touch controls out of the box mean it plays on mobile with no keyboard at all. Art plus audio tracks keep it mid-sized — a natural fit for a retro NES section.",
+    "zh": "鼠标/触屏操作，天然适配移动端，无需键盘就能玩。素材是图片+音轨，体积中等，适合放「怀旧红白机」分类。"
+  },
+  "categories": [
+    "arcade"
+  ],
+  "tags": [
+    "原生js",
+    "html5",
+    "mouse"
+  ],
+  "entry": "/vendor/duckhunt/index.html",
+  "repo": "https://github.com/MattSurabian/DuckHunt-JS",
+  "play": "",
+  "license": "MIT",
+  "stars": 630,
+  "size": "~1-5MB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": true,
+  "fetched_at": "2026-08-30T17:47:43.811Z",
+  "tech": [
+    "原生JS",
+    "HTML5"
+  ],
+  "_branch": null
+}

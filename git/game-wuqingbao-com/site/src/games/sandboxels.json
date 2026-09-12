@@ -1,0 +1,49 @@
+{
+  "schema": 2,
+  "slug": "sandboxels",
+  "title": {
+    "en": "sandboxels",
+    "zh": "Sandboxels"
+  },
+  "summary": {
+    "en": "The falling-sand physics sandbox in your browser: 500-plus elements reacting freely across chemistry, circuits and construction.",
+    "zh": "浏览器版「沙子模拟器」，500+ 元素自由反应，玩化学、玩电路、玩建造都行。"
+  },
+  "description": {
+    "en": "Choose a material from the element bar and paint it onto the canvas; everything reacts by rule — water plus fire becomes steam, acid eats through metal, current travels. No goals, no win state, pure sandbox.",
+    "zh": "从元素栏选一种材料在画布上涂画，元素之间会按规则反应（水+火=蒸汽、酸腐蚀金属、导电……），没有目标，纯沙盒。"
+  },
+  "howto": {
+    "en": "Mouse — pick an element and draw on the canvas.",
+    "zh": "鼠标 / 点击"
+  },
+  "tip": {
+    "en": "A sandbox with nothing to win keeps people around far longer than average, and user-made creations pile up on their own. It's on the heavy side (plenty of element textures) with a deep ruleset — embed the whole thing in an iframe rather than forking the code.",
+    "zh": "没有输赢的沙盒，用户平均停留时长非常可观，且自发创作内容多。缺点是体积偏大（元素贴图多）、规则库复杂，建议整体嵌入 iframe 而不是自己改。"
+  },
+  "categories": [
+    "adventure",
+    "casual"
+  ],
+  "tags": [
+    "原生js",
+    "canvas",
+    "mouse"
+  ],
+  "entry": "/vendor/sandboxels/index.html",
+  "repo": "https://github.com/R74nCom/sandboxels",
+  "play": "https://sandboxels.r74n.com",
+  "license": "MIT",
+  "stars": 453,
+  "size": "16.1MB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": true,
+  "fetched_at": "2026-08-30T18:23:57.665Z",
+  "tech": [
+    "原生JS",
+    "Canvas"
+  ],
+  "_branch": null
+}

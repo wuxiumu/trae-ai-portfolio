@@ -1,0 +1,9 @@
+# Astro/node
+node_modules/
+dist/
+.astro/
+
+# Env files (per-env secrets, never commit)
+.env
+.env.*
+!.env.example

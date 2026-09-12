@@ -1,0 +1,37 @@
+{
+  "schema": 2,
+  "slug": "snake-io",
+  "title": {
+    "en": "Snake.io (Offline)",
+    "zh": "贪吃蛇大作战（离线版）"
+  },
+  "summary": {
+    "en": "Slither-style snake arena — grow by eating pellets, avoid hitting other snakes, AI bots included.",
+    "zh": "Slither 风格贪吃蛇竞技场——吃豆子变长、别撞其他蛇，内置 AI 机器人对手。"
+  },
+  "description": {
+    "en": "A pure-frontend take on the slither.io formula by Bibhuti Poudyal. No server required, all bots run locally on canvas. A great starting point for reskinning your own multiplayer snake.",
+    "zh": "Bibhuti Poudyal 出品的纯前端 slither.io 复刻。零后端，所有 AI 蛇在本地 canvas 上跑。做多人贪吃蛇二次开发的最佳起手板。"
+  },
+  "howto": {
+    "en": "Move the mouse to steer. Click to boost (spends length). Eat food, avoid bigger snakes.",
+    "zh": "鼠标控制方向，点击加速（消耗身长）。吃食物、避开比你更大的蛇。"
+  },
+  "categories": [
+    "arena",
+    "arcade",
+    "casual"
+  ],
+  "tags": [
+    "snake",
+    "mouse",
+    "arena"
+  ],
+  "entry": "/vendor/snake-io/index.html",
+  "repo": "https://github.com/bibhuticoder/snake.io",
+  "license": "MIT",
+  "stars": 48,
+  "added": "2026-08-30",
+  "featured": true,
+  "fetched": true
+}

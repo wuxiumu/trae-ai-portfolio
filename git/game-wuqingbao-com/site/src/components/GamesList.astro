@@ -1,0 +1,122 @@
+---
+import Base from '../layouts/Base.astro';
+import GameCard from '../components/GameCard.astro';
+import { t } from '../i18n/index.js';
+import { langHref } from '../lib/nav.js';
+
+const { lang, games, heading, subheading, description } = Astro.props;
+const list = games || [];
+const headingText = heading ?? t(lang, 'games_list_title');
+const itemListJsonld = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: headingText,
+  numberOfItems: list.length,
+  itemListElement: list.map((g, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: g.title[lang] || g.title.en,
+    url: new URL(langHref(lang, `/games/${g.slug}`), Astro.url).href,
+  })),
+};
+---
+<Base lang={lang} title={headingText} description={description} currentPath={Astro.url.pathname} jsonld={[itemListJsonld]}>
+  <section class="hero small">
+    <h1>{headingText}</h1>
+    {subheading && <p class="lead">{subheading}</p>}
+  </section>
+  <section class="wrap">
+    <div class="search-box">
+      <input
+        id="game-search"
+        type="search"
+        data-lang={lang}
+        placeholder={t(lang, 'search_placeholder')}
+        aria-label={t(lang, 'search_label')}
+        autocomplete="off"
+      />
+      <p class="search-empty" hidden>{t(lang, 'search_no_results')}</p>
+    </div>
+    <div class="card-grid">
+      {list.map((g) => <GameCard lang={lang} game={g} />)}
+      {list.length === 0 && <p class="empty">{t(lang, 'empty_list')}</p>}
+    </div>
+  </section>
+</Base>
+
+<script>
+  import MiniSearch from 'minisearch';
+
+  const box = document.getElementById('game-search') as HTMLInputElement | null;
+  if (box) {
+    const section = box.closest('section');
+    const grid = section?.querySelector('.card-grid');
+    const cards = grid ? (Array.from(grid.querySelectorAll('.game-card')) as HTMLElement[]) : [];
+    const emptyMsg = section?.querySelector('.search-empty') as HTMLElement | null;
+    const zh = box.dataset.lang === 'zh';
+    // CJK has no word separators: emit chars + bigrams, latin stays whole-word.
+    const CJK = /[\u3040-\u30ff\u3400-\u9fff\uf900-\ufaff\uac00-\ud7af]/;
+    const tokenize = (text: string): string[] => {
+      const out: string[] = [];
+      for (const raw of String(text).split(/[^0-9a-zA-Z\u3040-\u30ff\u3400-\u9fff\uf900-\ufaff\uac00-\ud7af]+/)) {
+        if (!raw) continue;
+        const lower = raw.toLowerCase();
+        if (!CJK.test(lower)) { out.push(lower); continue; }
+        for (let i = 0; i < lower.length; i++) {
+          out.push(lower[i]);
+          if (i + 1 < lower.length) out.push(lower.slice(i, i + 2));
+        }
+      }
+      return out;
+    };
+
+    let mini: MiniSearch | null = null;
+    const getIndex = async () => {
+      if (mini) return mini;
+      const docs = await (await fetch('/search-index.json')).json();
+      mini = new MiniSearch({
+        idField: 'slug',
+        fields: ['title', 'summary', 'tags', 'cats'],
+        storeFields: ['slug'],
+        tokenize,
+        searchOptions: { tokenize, prefix: true, fuzzy: 0.1, boost: { title: 3, tags: 2 } },
+      });
+      mini.addAll(
+        docs.map((d: Record<string, unknown>) => ({
+          ...d,
+          title: zh ? d.titleZh : d.titleEn,
+          summary: zh ? d.summaryZh : d.summaryEn,
+          cats: zh ? d.catsZh : d.catsEn,
+        })),
+      );
+      return mini;
+    };
+
+    const original = cards;
+    let seq = 0;
+    box.addEventListener('input', async () => {
+      const q = box.value.trim();
+      const run = ++seq;
+      if (!q) {
+        if (emptyMsg) emptyMsg.hidden = true;
+        for (const c of original) { c.hidden = false; grid?.appendChild(c); }
+        return;
+      }
+      const index = await getIndex();
+      if (run !== seq) return; // stale keystroke
+      const hits = index.search(q);
+      const bySlug = new Map(hits.map((h) => [h.slug, h.score]));
+      const shown = original.filter((c) => bySlug.has(c.dataset.slug || ''));
+      if (shown.length === 0) {
+        for (const c of original) c.hidden = true;
+        if (emptyMsg) emptyMsg.hidden = false;
+        return;
+      }
+      if (emptyMsg) emptyMsg.hidden = true;
+      for (const c of original) c.hidden = !bySlug.has(c.dataset.slug || '');
+      shown
+        .sort((a, b) => (bySlug.get(b.dataset.slug || '') || 0) - (bySlug.get(a.dataset.slug || '') || 0))
+        .forEach((c) => grid?.appendChild(c));
+    });
+  }
+</script>

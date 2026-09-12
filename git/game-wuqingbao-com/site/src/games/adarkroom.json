@@ -1,0 +1,49 @@
+{
+  "schema": 2,
+  "slug": "adarkroom",
+  "title": {
+    "en": "A Dark Room",
+    "zh": "小黑屋"
+  },
+  "summary": {
+    "en": "A minimalist text adventure that grows from a single campfire into a village, a wilderness — and a mystery.",
+    "zh": "极简文字冒险，从一堆篝火开始，一步步建立村庄、探索荒野与真相。"
+  },
+  "description": {
+    "en": "Gather resources, raise buildings and send villagers to work as the story unlocks step by step. There are no graphics at all — everything plays out through text and progress bars.",
+    "zh": "点击按钮采集资源、建造建筑、派遣村民，剧情随进度解锁；全程无图形，靠文字与进度条推进。"
+  },
+  "howto": {
+    "en": "Mouse — click to interact, manage resources and follow the story.",
+    "zh": "点击交互，管理资源，探索剧情。"
+  },
+  "tip": {
+    "en": "Second only to 2048 in GitHub stars, with superb polish and a community-made Chinese translation. Text games barely touch your bandwidth and load instantly — the top pick for long-term retention.",
+    "zh": "Star 数仅次于 2048，口碑与完成度极高，有官方中文版（仓库社区提供）。文字类几乎不耗流量，加载秒开，长留存首选。"
+  },
+  "categories": [
+    "adventure",
+    "casual"
+  ],
+  "tags": [
+    "原生js",
+    "jquery",
+    "mouse"
+  ],
+  "entry": "/vendor/adarkroom/index.html",
+  "repo": "https://github.com/doublespeakgames/adarkroom",
+  "play": "https://adarkroom.doublespeakgames.com",
+  "license": "GPL-3.0",
+  "stars": 8252,
+  "size": "~1-5MB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": true,
+  "fetched": true,
+  "fetched_at": "2026-08-30T12:55:21.679Z",
+  "tech": [
+    "原生JS",
+    "jQuery"
+  ],
+  "_branch": "gh-pages"
+}

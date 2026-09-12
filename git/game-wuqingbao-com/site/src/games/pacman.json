@@ -1,0 +1,48 @@
+{
+  "schema": 2,
+  "slug": "pacman",
+  "title": {
+    "en": "Pac-Man HTML5",
+    "zh": "吃豆人"
+  },
+  "summary": {
+    "en": "A polished HTML5 Pac-Man replica with multiple mazes, smart ghost AI and power-ups all included.",
+    "zh": "国产高质量 HTML5 吃豆人复刻，关卡、幽灵 AI、道具一应俱全。"
+  },
+  "description": {
+    "en": "Chomp every pellet to clear the maze; grab a power pellet to flip the hunt and chase the ghosts down. A ghost's touch costs a life, and you only get three.",
+    "zh": "操控吃豆人吃光所有豆子过关，吃到大力丸后可反追幽灵；被幽灵碰到减一条命，三条命用完结束。"
+  },
+  "howto": {
+    "en": "Arrow keys or WASD to move through the maze.",
+    "zh": "方向键在迷宫中移动，吃光豆子，避开幽灵。"
+  },
+  "tip": {
+    "en": "One of the most complete open-source Pac-Man clones, with clearly commented ghost pathfinding AI. Documentation in Chinese keeps the modding bar low, and the map data is editable for custom levels.",
+    "zh": "完成度最高的开源吃豆人之一，幽灵寻路 AI 注释清晰。中文文档，二次开发门槛低；地图数据可编辑，能自制关卡。"
+  },
+  "categories": [
+    "arcade"
+  ],
+  "tags": [
+    "原生js",
+    "canvas",
+    "keyboard"
+  ],
+  "entry": "/vendor/pacman/index.html",
+  "repo": "https://github.com/mumuy/pacman",
+  "play": "https://passer-by.com/pacman/",
+  "license": "MIT",
+  "stars": 1641,
+  "size": "~200KB-1MB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": true,
+  "fetched": true,
+  "fetched_at": "2026-08-30T12:48:55.361Z",
+  "tech": [
+    "原生JS",
+    "Canvas"
+  ],
+  "_branch": "master"
+}

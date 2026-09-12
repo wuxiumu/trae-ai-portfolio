@@ -1,0 +1,48 @@
+{
+  "schema": 2,
+  "slug": "flappylearning",
+  "title": {
+    "en": "FlappyLearning",
+    "zh": "AI 学飞小鸟"
+  },
+  "summary": {
+    "en": "Watch a flock of AI birds teach themselves Flappy Bird through neuroevolution, live on screen.",
+    "zh": "让一群 AI 小鸟用神经进化自己学会玩 Flappy Bird，全程可视化。"
+  },
+  "description": {
+    "en": "It starts flying the moment it loads: dozens of birds at once, the crashers culled each round, the survivors' brains crossed and mutated into the next generation. Within a few dozen generations they simply never die.",
+    "zh": "打开即自动运行，几十只小鸟同时飞，撞管的被淘汰，存活者的「大脑」交叉变异出下一代，几十代后就能无限飞。"
+  },
+  "howto": {
+    "en": "Nothing to press — just watch it learn.",
+    "zh": "观看（自动）"
+  },
+  "tip": {
+    "en": "Not a game to play but a show to watch — which is exactly why it spreads on social feeds. A perfect hook for an 'AI' corner on your site.",
+    "zh": "不是给人玩的，是给人看的——但正是这类 Demo 最容易在社交平台被转发。适合做站点的「AI 专区」引流位。"
+  },
+  "categories": [
+    "casual",
+    "retro"
+  ],
+  "tags": [
+    "原生js",
+    "神经网络"
+  ],
+  "entry": "/vendor/flappylearning/index.html",
+  "repo": "https://github.com/xviniette/FlappyLearning",
+  "play": "https://xviniette.github.io/FlappyLearning/",
+  "license": "MIT",
+  "stars": 3995,
+  "size": "~200KB-1MB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": true,
+  "fetched": true,
+  "fetched_at": "2026-08-30T17:47:43.106Z",
+  "tech": [
+    "原生JS",
+    "神经网络"
+  ],
+  "_branch": null
+}

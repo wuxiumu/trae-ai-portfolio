@@ -1,0 +1,48 @@
+{
+  "schema": 2,
+  "slug": "penpa",
+  "title": {
+    "en": "penpa-edit",
+    "zh": "Penpa+"
+  },
+  "summary": {
+    "en": "An online editor and solver for Sudoku and a huge range of variant puzzles — a staple in puzzle circles.",
+    "zh": "数独与各类变种谜题的在线编辑器 + 求解器，谜题圈口碑工具。"
+  },
+  "description": {
+    "en": "Draw clues and constraints onto the grid, then let the built-in solver confirm your puzzle has a unique solution. Export the finished puzzle as an image or a shareable link.",
+    "zh": "在棋盘上绘制线索与约束，内置求解器可判定题目是否有唯一解，可导出题目图与链接分享。"
+  },
+  "howto": {
+    "en": "Mouse.",
+    "zh": "鼠标"
+  },
+  "tip": {
+    "en": "Leans tool rather than pure game, but it opens the door to a 'create and solve' corner that keeps hardcore puzzle fans on your site considerably longer.",
+    "zh": "偏工具向而非纯游戏，但适合给站点加一个「出题 / 解题」专区，吸引硬核解谜用户停留更久。"
+  },
+  "categories": [
+    "puzzle"
+  ],
+  "tags": [
+    "原生js",
+    "canvas",
+    "mouse"
+  ],
+  "entry": "/vendor/penpa/index.html",
+  "repo": "https://github.com/swaroopg92/penpa-edit",
+  "play": "https://swaroopg92.github.io/penpa-edit/",
+  "license": "MIT",
+  "stars": 167,
+  "size": "~1-5MB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": true,
+  "fetched_at": "2026-08-30T17:47:44.332Z",
+  "tech": [
+    "原生JS",
+    "Canvas"
+  ],
+  "_branch": null
+}

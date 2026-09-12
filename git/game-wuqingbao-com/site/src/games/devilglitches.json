@@ -1,0 +1,49 @@
+{
+  "schema": 2,
+  "slug": "devilglitches",
+  "title": {
+    "en": "Devil Glitches",
+    "zh": "Devil Glitches"
+  },
+  "summary": {
+    "en": "An award-winning js13k entry — a devil-themed action puzzler squeezed into 13 kilobytes.",
+    "zh": "js13k 游戏开发大赛（13KB 限制）获奖作品，恶魔主题的极简动作解谜。"
+  },
+  "description": {
+    "en": "A complete game built inside the contest's 13KB limit: exploit a glitch mechanic to phase through levels and slip past traps.",
+    "zh": "在限定的 13KB 体积内完成的完整游戏：利用场景故障（Glitch）机制解开关卡、躲开陷阱。"
+  },
+  "howto": {
+    "en": "Arrow keys to move, mouse also supported.",
+    "zh": "方向键 / 鼠标"
+  },
+  "tip": {
+    "en": "js13k means extreme minimalism — 13KB total, instant load, offline-friendly. A must for any 'tiny games' special, and perfect for bundling into an app's embedded page.",
+    "zh": "js13k 系列意味着极致体积（13KB），秒开、可离线。整站做「极限小游戏」专题时必收，也适合打包进 App 内嵌页。"
+  },
+  "categories": [
+    "retro"
+  ],
+  "tags": [
+    "单文件js",
+    "js13k",
+    "keyboard",
+    "mouse"
+  ],
+  "entry": "/vendor/devilglitches/index.html",
+  "repo": "https://github.com/agar3s/devil-glitches",
+  "play": "https://agar3s.github.io/devil-glitches/",
+  "license": "MIT",
+  "stars": 208,
+  "size": "~10-200KB",
+  "server": false,
+  "added": "2026-08-30",
+  "featured": false,
+  "fetched": true,
+  "fetched_at": "2026-08-30T17:47:43.278Z",
+  "tech": [
+    "单文件JS",
+    "js13k"
+  ],
+  "_branch": null
+}

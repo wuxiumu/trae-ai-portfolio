@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /config.local.js
+
+# AI 搜索引擎抓取
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://wuxiumu.github.io/trae-ai-portfolio/sitemap.xml

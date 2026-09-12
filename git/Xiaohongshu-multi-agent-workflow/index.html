@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小红书多智能体内容生产流水线_AI选题研究自动化_收集判断执行三智能体</title>
+<meta name="description" content="小红书运营自动化框架：收集智能体（LLM扩词+Playwright爆款抓取）→判断智能体（规则评分+选题排序）→执行智能体（AI教程/Skill/PPT三轨成品），Python+LLM+PHP只读看板，文件状态机断点续跑，只产本地物料不自动发帖。">
+<meta name="keywords" content="小红书运营,多智能体,AI内容生产,LLM工作流,multi-agent,选题研究,爆款分析,Playwright,自动化,Python,PHP,AI教程,Skill,PPT模板,content-pipeline">
+<meta name="author" content="wuxiumu">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="theme-color" content="#ef4444">
+<link rel="canonical" href="https://xiaohongshu-multi-agent-workflow.chiguashentan.com/">
+<!-- 正式域名已绑定：canonical/OG/robots/sitemap 均指向本子域名 -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A4%96%3C/text%3E%3C/svg%3E">
+
+<!-- Open Graph / 社交分享卡片 -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="小红书多智能体内容生产流水线">
+<meta property="og:title" content="小红书多智能体内容生产流水线 · 收集→判断→执行">
+<meta property="og:description" content="LLM扩词+爆款抓取→规则评分选题→三轨成品组装，Python+LLM+Playwright+PHP，断点续跑，不自动发帖。">
+<meta property="og:url" content="https://xiaohongshu-multi-agent-workflow.chiguashentan.com/">
+<meta property="og:image" content="https://xiaohongshu-multi-agent-workflow.chiguashentan.com/api.php?action=image&path=data%2Fimages%2Fski_001%2Fcover.png">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="小红书多智能体内容生产流水线 · 收集→判断→执行">
+<meta name="twitter:description" content="LLM扩词+爆款抓取→规则评分选题→三轨成品组装，断点续跑，不自动发帖。">
+<meta name="twitter:image" content="https://xiaohongshu-multi-agent-workflow.chiguashentan.com/api.php?action=image&path=data%2Fimages%2Fski_001%2Fcover.png">
+
+<!-- 结构化数据：供搜索引擎与 AI 问答理解（GEO） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "小红书多智能体内容生产流水线",
+  "alternateName": "Collector-Judge-Executor 多智能体内容工坊",
+  "url": "https://xiaohongshu-multi-agent-workflow.chiguashentan.com/",
+  "description": "面向小红书运营的多智能体内容生产框架：收集智能体用LLM扩展长尾关键词并用Playwright抓取爆款样本，判断智能体用纯Python规则评分排序、LLM生成选题，执行智能体按AI教程、Skill分享、PPT模板三轨组装可发布笔记。JSON文件状态机支持断点续跑，PHP只读看板审核，系统不自动发帖。",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "zh-CN",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
+  "author": { "@type": "Organization", "name": "wuxiumu", "url": "https://github.com/wuxiumu" },
+  "downloadUrl": "https://github.com/wuxiumu/Xiaohongshu-multi-agent-workflow",
+  "softwareHelp": { "@type": "CreativeWork", "url": "https://github.com/wuxiumu/Xiaohongshu-multi-agent-workflow#readme" },
+  "featureList": [
+    "三智能体架构：收集（LLM扩词+Playwright抓爆款）、判断（规则评分+LLM选题）、执行（三轨成品）",
+    "三条内容轨：AI教程、Skill分享、PPT逐页成稿Markdown模板",
+    "确定性规则评分零token，LLM只负责语义环节",
+    "collected/judged/produced 三份JSON文件状态机，断点续跑",
+    "单文件只读PHP API+静态HTML看板，无数据库零框架",
+    "图片接口realpath白名单防目录穿越，密钥不入库",
+    "系统只产出本地待发布物料，永不自动发帖"
+  ],
+  "keywords": "小红书,多智能体,LLM,内容生产,选题,自动化,Playwright,Python,PHP,multi-agent",
+  "contactPoint": { "@type": "ContactPoint", "email": "contact@chiguashentan.com", "contactType": "customer support", "availableLanguage": ["zh-CN","en"] }
+}
+</script>
+<link rel="stylesheet" href="css/style.css?v=3">
+<!-- Microsoft Clarity 流量统计 -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "tbg57dxe7f");
+</script>
+</head>
+<body>
+
+<div class="sticky-top">
+<header class="header">
+  <div class="header-inner">
+    <h1 class="logo">
+      <span>多智能体流水线</span>
+      <span class="badge">小红书工坊</span>
+    </h1>
+    <div class="stats" id="stats"></div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <div class="tabs-inner">
+    <button class="tab active" data-view="posts">作品 <span class="count" id="count-posts">0</span></button>
+    <button class="tab" data-view="flow">实现流程</button>
+    <button class="tab" onclick="openCodeViewer()">源代码</button>
+  </div>
+</nav>
+</div>
+
+<div class="container">
+
+  <!-- 作品视图 -->
+  <div class="view active" id="view-posts">
+    <div class="filter-bar">
+      <button class="filter-btn active" data-track="">全部</button>
+      <button class="filter-btn" data-track="tutorial">AI教程</button>
+      <button class="filter-btn" data-track="skill">Skill</button>
+      <button class="filter-btn" data-track="ppt">PPT</button>
+      <input class="search" id="search" placeholder="搜索标题/标签...">
+    </div>
+    <div class="grid" id="post-grid"></div>
+    <div class="empty" id="post-empty" style="display:none">暂无匹配作品</div>
+  </div>
+
+  <!-- 流程视图 -->
+  <div class="view" id="view-flow">
+    <div class="flow-container" id="flow-content"></div>
+  </div>
+
+  <!-- 源代码视图已改为弹窗，见页面底部 code-overlay -->
+</div>
+
+<!-- 详情弹窗 -->
+<div class="detail-overlay" id="detail-overlay">
+  <div class="detail-modal" id="detail-modal"></div>
+</div>
+
+<!-- 源代码查看弹窗 -->
+<div class="code-overlay" id="code-overlay">
+  <div class="code-modal">
+    <div class="code-modal-header">
+      <span class="code-modal-title">流水线脚本源码</span>
+      <div class="code-modal-actions">
+        <button class="code-copy-btn" id="code-copy-btn" onclick="copyCode()">复制代码</button>
+        <span class="code-close" onclick="closeCodeViewer()">&times;</span>
+      </div>
+    </div>
+    <div class="code-modal-body">
+      <div class="code-sidebar" id="script-list"></div>
+      <div class="code-main">
+        <div class="code-file-bar" id="code-file">选择左侧文件查看源码</div>
+        <div class="code-scroll">
+          <table class="code-table" id="code-table"></table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/app.js?v=3"></script>
+
+<!-- 无脚本降级内容：不执行 JS 的搜索引擎爬虫可抓取完整主题文本（白帽 noscript） -->
+<noscript>
+<div style="max-width:860px;margin:24px auto;padding:0 20px;font-family:-apple-system,'PingFang SC',sans-serif;color:#1f2937;line-height:1.8">
+  <h2>小红书多智能体内容生产流水线（收集 → 判断 → 执行）</h2>
+  <p>一套用 Python、LLM、Playwright 与 PHP 实现的小红书选题研究与内容生产自动化框架。三个智能体分工协作：收集智能体用 LLM 把赛道种子词扩成长尾关键词，并用 Playwright 抓取小红书爆款样本；判断智能体用纯 Python 规则对关键词热度评分排序，再由 LLM 提炼爆款模式、生成差异化选题；执行智能体按 AI 教程、Skill 分享、PPT 模板三条内容轨组装标题、正文、配图与可复制模板。所有状态落 JSON 文件，支持断点续跑；系统只产出本地待发布物料，永远不自动发帖。</p>
+  <h3>三智能体职责</h3>
+  <ol>
+    <li>收集智能体 Collector：LLM 关键词扩展 + Playwright 爆款笔记抓取（扫码登录一次、限速 5-8 秒、单次不超过 50 条）；</li>
+    <li>判断智能体 Judge：确定性规则评分（快、零 token），LLM 负责爆款模式提炼与选题生成；</li>
+    <li>执行智能体 Executor：tutorial 分步教程、skill 代码演示、ppt 逐页成稿 Markdown 模板三轨分派。</li>
+  </ol>
+  <h3>数据流转</h3>
+  <p>collected.json（关键词库+爆款样本）→ judged.json（评分与选题队列）→ produced.json（成品笔记与配图路径），文件即数据库，可读、可 diff、可手工修复，重启无状态丢失。</p>
+  <h3>看板与接口</h3>
+  <p>根目录静态 index.html 搭配单文件只读 api.php（list/post/stats/flow/scripts/image/md_download），php -S 或任意 PHP 虚拟主机即可运行，无需数据库；图片接口以 realpath 白名单限制在 data 目录内，防止目录穿越；API Key 只存于项目外的 ~/.openclaw/openclaw.json，仓库零密钥。</p>
+  <p>开源仓库：<a href="https://github.com/wuxiumu/Xiaohongshu-multi-agent-workflow">github.com/wuxiumu/Xiaohongshu-multi-agent-workflow</a>。开启 JavaScript 后可浏览 16 篇成品、详情与生产流程。</p>
+  <p>联系方式：<a href="mailto:contact@chiguashentan.com">contact@chiguashentan.com</a></p>
+</div>
+</noscript>
+
+<footer style="text-align:center;padding:20px 16px 28px;color:#6b7280;font-size:13px;line-height:1.7;background:#f9fafb;border-top:1px solid #e5e7eb">
+  <div>
+    <a href="https://github.com/wuxiumu/Xiaohongshu-multi-agent-workflow" target="_blank" rel="noopener" style="color:#ef4444;text-decoration:none">GitHub 开源仓库</a>
+    <span style="margin:0 8px;color:#d1d5db">·</span>
+    <a href="mailto:contact@chiguashentan.com" style="color:#ef4444;text-decoration:none">contact@chiguashentan.com</a>
+  </div>
+  <div style="margin-top:6px;color:#9ca3af">小红书多智能体内容生产流水线 · 系统不自动发帖，只产出本地待发布物料</div>
+</footer>
+</body>
+</html>
